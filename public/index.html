@@ -5,6 +5,9 @@
 	<meta http-equiv="X-UA-Compatible" content="IE=edge">
 	<meta name="viewport" content="width=device-width, initial-scale=1.0">
 	
+	<meta property="og:title" content="T Gamache - Offical Site of the Author T Gamache" />
+	<meta property="og:image" content="../images/notsocommoncover.png" />
+	
 	<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
 	
 	<title>T Gamache, Author - Official Site</title>
@@ -30,25 +33,27 @@
 				margin: 0;
 		}
 		
-		.flex-center {
+		/* .flex-center {
 			align-items: center;
 			display: flex;
 			justify-content: center;
-		}
+		} */
 		
 		.floating-card {
 			width: 50vmin;
 			height: 80vmin;
 			padding: 10px;
-			display: flex;
+			top: 5%;
+			display: block;
 			border-style: solid;
 			border-color: black;
 			position: -webkit-sticky;
 			position: sticky;
+			float: left;
+			text-align: center;
 			left: 5px;
 			top: 5px;
 			background-color: white;
-			z-index: 10;
 			opacity: 1;
 		}
 		
@@ -76,10 +81,17 @@
 				text-transform: uppercase;
 		}
 		
+		/* TODO: 
+		- Adjust left and righ side margins
+		- Select Font
+		- Integrate Dark mode for ya boi
+		- Set up simple database with one of his blog posts or something
+		*/
 		.main {
-			position: absolute; 
-			left: 40%; 
-			top: 8%; 
+			float: left;
+			top: 5%;
+			width: 60%; 
+			padding: 0 20px;
 		}
 		
 		.social {
@@ -120,13 +132,77 @@
 			background: #125688;
 			color: white;
 		}
+		
+		.profile-pic {
+			width: 35vmin; 
+			height: 45vmin; 
+			position: absolute; 
+			left: 13%;
+		}
+		
+		.cover-photo {
+			padding: 0 5px; 
+			float: left;
+		}
+		
+		@media only screen and (device-width: 375px) and (device-height: 812px) and (-webkit-device-pixel-ratio : 3) and (orientation: portrait) {
+			/* For Mobile Viewing */
+			.floating-card {
+				width: 100%;
+				padding: 10px;
+				position: relative;
+			}
+			
+			.main {
+				width: 100%;
+				margin-top: 10px;
+			}
+			
+			.profile-pic {
+				left: 30%;
+			}
+			
+			.social {
+				top: 260px;
+				right: 0;
+				
+			}
+			
+			.linkContainer {
+				left: 0;
+			}
+			
+			.cover-photo {
+				width: 35%;
+				height: 45%;
+			}
+		}
 
 				
 	</style>
 </head>
 <body>
+	<div class="floating-card">
+		<div class="title">
+			<hr />
+			T Gamache - Author
+			<hr />
+			<!-- <img src="../images/profile.jpg" alt="Profile Picture" style="position: relative; margin: 0 0 auto;"/> -->
+			<img class="profile-pic" alt="T Gamache-Author" src="https://tomgamachebooks.com/wp-content/uploads/2019/07/cropped-8A35A76C-FDDD-4B0D-88FA-5E50446D2BFB.jpeg" >
+			<div class="social">
+				<a href="https://www.facebook.com/tgamachebooks/" class="fa fa-facebook"></a>
+				<a href="https://twitter.com/t_gamache" class="fa fa-twitter"></a>
+				<a href="mailto:tgamachebooks@gmail.com" class="fa fa-send"></a>
+			</div>
+		</div>
+		<div class="linkContainer">
+			<a style="color: black; padding: 0 25px; font-size: 15px; font-weight: 600; letter-spacing: .1rem ">About</a>
+			<br />
+			<a style="color: black; padding: 0 25px; font-size: 15px; font-weight: 600; letter-spacing: .1rem "> Blog</a>
+		</div>
+	</div>
 	<div class="main">
-		<p><img style="padding: 0 3px; float: left; " data-attachment-id="171" data-permalink="https://tomgamachebooks.com/background_texture_tom-2/" data-orig-file="https://i2.wp.com/tomgamachebooks.com/wp-content/uploads/2019/07/IMG_0013.jpg?fit=3150%2C4800&amp;ssl=1" data-orig-size="3150,4800" data-comments-opened="1" data-image-meta="{&quot;aperture&quot;:&quot;0&quot;,&quot;credit&quot;:&quot;&quot;,&quot;camera&quot;:&quot;&quot;,&quot;caption&quot;:&quot;&quot;,&quot;created_timestamp&quot;:&quot;1559359965&quot;,&quot;copyright&quot;:&quot;&quot;,&quot;focal_length&quot;:&quot;0&quot;,&quot;iso&quot;:&quot;0&quot;,&quot;shutter_speed&quot;:&quot;0&quot;,&quot;title&quot;:&quot;background_texture_Tom 2&quot;,&quot;orientation&quot;:&quot;1&quot;}" data-image-title="background_texture_Tom 2" data-image-description="" data-medium-file="https://i2.wp.com/tomgamachebooks.com/wp-content/uploads/2019/07/IMG_0013.jpg?fit=197%2C300&amp;ssl=1" data-large-file="https://i2.wp.com/tomgamachebooks.com/wp-content/uploads/2019/07/IMG_0013.jpg?fit=672%2C1024&amp;ssl=1" class="wp-image-171 alignleft jetpack-lazy-image jetpack-lazy-image--handled" src="https://i2.wp.com/tomgamachebooks.com/wp-content/uploads/2019/07/IMG_0013.jpg?resize=300%2C457&amp;ssl=1" alt="" width="300" height="457" data-recalc-dims="1" srcset="https://i2.wp.com/tomgamachebooks.com/wp-content/uploads/2019/07/IMG_0013.jpg?resize=672%2C1024&amp;ssl=1 672w, https://i2.wp.com/tomgamachebooks.com/wp-content/uploads/2019/07/IMG_0013.jpg?resize=197%2C300&amp;ssl=1 197w, https://i2.wp.com/tomgamachebooks.com/wp-content/uploads/2019/07/IMG_0013.jpg?resize=768%2C1170&amp;ssl=1 768w, https://i2.wp.com/tomgamachebooks.com/wp-content/uploads/2019/07/IMG_0013.jpg?resize=945%2C1440&amp;ssl=1 945w, https://i2.wp.com/tomgamachebooks.com/wp-content/uploads/2019/07/IMG_0013.jpg?w=1454&amp;ssl=1 1454w, https://i2.wp.com/tomgamachebooks.com/wp-content/uploads/2019/07/IMG_0013.jpg?w=2181&amp;ssl=1 2181w" data-lazy-loaded="1" sizes="(max-width: 300px) 100vw, 300px">
+		<p><img class="cover-photo" data-attachment-id="171" data-permalink="https://tomgamachebooks.com/background_texture_tom-2/" data-orig-file="https://i2.wp.com/tomgamachebooks.com/wp-content/uploads/2019/07/IMG_0013.jpg?fit=3150%2C4800&amp;ssl=1" data-orig-size="3150,4800" data-comments-opened="1" data-image-meta="{&quot;aperture&quot;:&quot;0&quot;,&quot;credit&quot;:&quot;&quot;,&quot;camera&quot;:&quot;&quot;,&quot;caption&quot;:&quot;&quot;,&quot;created_timestamp&quot;:&quot;1559359965&quot;,&quot;copyright&quot;:&quot;&quot;,&quot;focal_length&quot;:&quot;0&quot;,&quot;iso&quot;:&quot;0&quot;,&quot;shutter_speed&quot;:&quot;0&quot;,&quot;title&quot;:&quot;background_texture_Tom 2&quot;,&quot;orientation&quot;:&quot;1&quot;}" data-image-title="background_texture_Tom 2" data-image-description="" data-medium-file="https://i2.wp.com/tomgamachebooks.com/wp-content/uploads/2019/07/IMG_0013.jpg?fit=197%2C300&amp;ssl=1" data-large-file="https://i2.wp.com/tomgamachebooks.com/wp-content/uploads/2019/07/IMG_0013.jpg?fit=672%2C1024&amp;ssl=1" class="wp-image-171 alignleft jetpack-lazy-image jetpack-lazy-image--handled" src="https://i2.wp.com/tomgamachebooks.com/wp-content/uploads/2019/07/IMG_0013.jpg?resize=300%2C457&amp;ssl=1" alt="" width="300" height="457" data-recalc-dims="1" srcset="https://i2.wp.com/tomgamachebooks.com/wp-content/uploads/2019/07/IMG_0013.jpg?resize=672%2C1024&amp;ssl=1 672w, https://i2.wp.com/tomgamachebooks.com/wp-content/uploads/2019/07/IMG_0013.jpg?resize=197%2C300&amp;ssl=1 197w, https://i2.wp.com/tomgamachebooks.com/wp-content/uploads/2019/07/IMG_0013.jpg?resize=768%2C1170&amp;ssl=1 768w, https://i2.wp.com/tomgamachebooks.com/wp-content/uploads/2019/07/IMG_0013.jpg?resize=945%2C1440&amp;ssl=1 945w, https://i2.wp.com/tomgamachebooks.com/wp-content/uploads/2019/07/IMG_0013.jpg?w=1454&amp;ssl=1 1454w, https://i2.wp.com/tomgamachebooks.com/wp-content/uploads/2019/07/IMG_0013.jpg?w=2181&amp;ssl=1 2181w" data-lazy-loaded="1" sizes="(max-width: 300px) 100vw, 300px">
 			Welcome to my site! 
 			<br />
 			<br />	
@@ -162,27 +238,8 @@
 			<br />
 			Thanks for stopping by and be sure to have a look around. Check out both my Twitter and Facebook feeds and give me a follow! Feel free to drop me line at tgamachebooks@gmail.com
 		</p>
+		<p style="margin-top: 20px;"></p>
 	</div>
-	<div class="floating-card">
-		<div class="title">
-			<hr />
-			T Gamache - Author
-			<hr />
-			<!-- <img src="../images/profile.jpg" alt="Profile Picture" style="position: relative; margin: 0 0 auto;"/> -->
-			<img class="header-image" alt="T Gamache-Author" src="https://tomgamachebooks.com/wp-content/uploads/2019/07/cropped-8A35A76C-FDDD-4B0D-88FA-5E50446D2BFB.jpeg" style="width: 35vmin; height: 45vmin; position: absolute; left: 13%;">
-			<div class="social">
-				<a href="https://www.facebook.com/tgamachebooks/" class="fa fa-facebook"></a>
-				<a href="https://twitter.com/t_gamache" class="fa fa-twitter"></a>
-				<a href="mailto:tgamachebooks@gmail.com" class="fa fa-send"></a>
-			</div>
-		</div>
-		<div class="linkContainer">
-			<a style="color: black; padding: 0 25px; font-size: 15px; font-weight: 600; letter-spacing: .1rem ">About</a>
-			<br />
-			<a style="color: black; padding: 0 25px; font-size: 15px; font-weight: 600; letter-spacing: .1rem "> Blog</a>
-		</div>
-	</div>
-	
 	
 </body>
 </html>
