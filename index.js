@@ -1,9 +1,9 @@
 const http = require('http');
 const url = require('url');
 const fs = require('fs');
-const express = require('express');
-const router = express.Router();
-const app = express();
+// const express = require('express');
+// const router = express.Router();
+// const app = express();
 const port = process.argv[2] || 8080;
 
 const mimeType = {

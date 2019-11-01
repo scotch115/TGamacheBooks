@@ -27,8 +27,10 @@
 		html, body {
 				background-color: var(--primary-color);
 				color: var(--font-color);
-				/* font-family: 'Raleway', sans-serif; /*Still need to go over font ideas with Dad */
-				font-weight: 100;
+				font-family: 'Joesefin Sans', sans-serif;
+				font-weight: 800;
+				font-size: 19px;
+				font-style: italic;
 				height: 250vmin;
 				margin: 0;
 		}
@@ -52,9 +54,11 @@
 		}
 		
 		.title {
-			position: absolute; 
+			position: relative; 
 			width: 90%;
-			font-size: 3vmax; 
+			font-size: 180%; 
+			font-style: normal;
+			font-weight: 400;
 			padding: 10px; 
 			margin: 0 0 auto;
 		}
@@ -62,6 +66,7 @@
 		.linkContainer {
 			position: absolute;
 			top: 82%;
+			text-align: left;
 			
 		}
 		
@@ -90,7 +95,7 @@
 		
 		.social {
 			position: absolute;
-			top: 520px;
+			top: 530px;
 		}
 		
 		.fa {
@@ -139,17 +144,36 @@
 			float: left;
 		}
 		
-		@media only screen and (device-width: 375px) and (device-height: 812px) and (-webkit-device-pixel-ratio : 3) and (orientation: portrait) {
+		.subtitle {
+			font-family:'Joesfin Sans' sans-serif; 
+			font-size: 50%; 
+			line-height: 0.5; 
+			margin: 0.5 auto; 
+			text-align: center; 
+			color: lightgrey;
+		}
+		
+		@media only screen and (max-width: 800px) {
 			/* For Mobile Viewing */
 			.floating-card {
-				width: 100%;
+				width: 90%;
+				height: 35%;
 				padding: 10px;
+				left: 2vw;
 				position: relative;
 			}
 			
 			.main {
-				width: 100%;
+				width: 85%;
 				margin-top: 10px;
+			}
+			
+			.title {
+				font-size: 8vw;
+			}
+			
+			.subtitle {
+				font-size: 4vw;
 			}
 			
 			.profile-pic {
@@ -157,9 +181,13 @@
 			}
 			
 			.social {
-				top: 260px;
-				right: 0;
-				
+				top: 78vw;
+				right: -5vw;
+			}
+			
+			.fa {
+				width: 4vw;
+				font-size: 4vw;
 			}
 			
 			.linkContainer {
@@ -167,8 +195,9 @@
 			}
 			
 			.cover-photo {
-				width: 35%;
+				width: 85vw;
 				height: 45%;
+				padding-bottom: 5vw;
 			}
 		}
 
@@ -181,6 +210,9 @@
 			<hr />
 			T Gamache - Author
 			<hr />
+			<p class="subtitle">
+				Official Site of the Author T Gamache
+			</p>
 			<img class="profile-pic" alt="T Gamache-Author" src="https://tomgamachebooks.com/wp-content/uploads/2019/07/cropped-8A35A76C-FDDD-4B0D-88FA-5E50446D2BFB.jpeg" >
 			<div class="social">
 				<a href="https://www.facebook.com/tgamachebooks/" class="fa fa-facebook"></a>
@@ -189,31 +221,26 @@
 			</div>
 		</div>
 		<div class="linkContainer">
-			<a style="color: black; padding: 0 25px; font-size: 15px; font-weight: 600; letter-spacing: .1rem ">About</a>
+			<a style="color: black; padding: 0 25px; font-size: 15px; font-weight: 600; letter-spacing: .1rem;">About</a>
 			<br />
-			<a style="color: black; padding: 0 25px; font-size: 15px; font-weight: 600; letter-spacing: .1rem "> Blog</a>
+			<a style="color: black; padding: 0 25px; font-size: 15px; font-weight: 600; letter-spacing: .1rem;">Blog</a>
 		</div>
 	</div>
 	<div class="main">
 		<p><img class="cover-photo" data-attachment-id="171" data-permalink="https://tomgamachebooks.com/background_texture_tom-2/" data-orig-file="https://i2.wp.com/tomgamachebooks.com/wp-content/uploads/2019/07/IMG_0013.jpg?fit=3150%2C4800&amp;ssl=1" data-orig-size="3150,4800" data-comments-opened="1" data-image-meta="{&quot;aperture&quot;:&quot;0&quot;,&quot;credit&quot;:&quot;&quot;,&quot;camera&quot;:&quot;&quot;,&quot;caption&quot;:&quot;&quot;,&quot;created_timestamp&quot;:&quot;1559359965&quot;,&quot;copyright&quot;:&quot;&quot;,&quot;focal_length&quot;:&quot;0&quot;,&quot;iso&quot;:&quot;0&quot;,&quot;shutter_speed&quot;:&quot;0&quot;,&quot;title&quot;:&quot;background_texture_Tom 2&quot;,&quot;orientation&quot;:&quot;1&quot;}" data-image-title="background_texture_Tom 2" data-image-description="" data-medium-file="https://i2.wp.com/tomgamachebooks.com/wp-content/uploads/2019/07/IMG_0013.jpg?fit=197%2C300&amp;ssl=1" data-large-file="https://i2.wp.com/tomgamachebooks.com/wp-content/uploads/2019/07/IMG_0013.jpg?fit=672%2C1024&amp;ssl=1" class="wp-image-171 alignleft jetpack-lazy-image jetpack-lazy-image--handled" src="https://i2.wp.com/tomgamachebooks.com/wp-content/uploads/2019/07/IMG_0013.jpg?resize=300%2C457&amp;ssl=1" alt="" width="300" height="457" data-recalc-dims="1" srcset="https://i2.wp.com/tomgamachebooks.com/wp-content/uploads/2019/07/IMG_0013.jpg?resize=672%2C1024&amp;ssl=1 672w, https://i2.wp.com/tomgamachebooks.com/wp-content/uploads/2019/07/IMG_0013.jpg?resize=197%2C300&amp;ssl=1 197w, https://i2.wp.com/tomgamachebooks.com/wp-content/uploads/2019/07/IMG_0013.jpg?resize=768%2C1170&amp;ssl=1 768w, https://i2.wp.com/tomgamachebooks.com/wp-content/uploads/2019/07/IMG_0013.jpg?resize=945%2C1440&amp;ssl=1 945w, https://i2.wp.com/tomgamachebooks.com/wp-content/uploads/2019/07/IMG_0013.jpg?w=1454&amp;ssl=1 1454w, https://i2.wp.com/tomgamachebooks.com/wp-content/uploads/2019/07/IMG_0013.jpg?w=2181&amp;ssl=1 2181w" data-lazy-loaded="1" sizes="(max-width: 300px) 100vw, 300px">
 			Welcome to my site! 
-			<br />
-			<br />	
-			My first novel, “Not-So-Common-People” is available now from Amazon!!
+			My first novel, "Not-So-Common-People" is available now from Amazon!!
 			<br />
 			Click here to order!
-			<br />
-			<br />
-			Nathan Smythe is a young man with a musical addiction, a stressful family, and 2 roommates who seem to be the only people who understand him. When tragedy strikes his family he finds feelings he didn’t know he had, and meets someone who could change the trajectory of his life forever. Only this is not what he had planned at all. But then again, he never really had a plan.
+			<br /><br />
+			Nathan Smythe is a young man with a musical addiction, a stressful family, and 2 roommates who seem to be the only people who understand him. When tragedy strikes his family he finds feelings he didn't know he had, and meets someone who could change the trajectory of his life forever. Only this is not what he had planned at all. But then again, he never really had a plan.
 			<br /><br />
 			Nathan and his three siblings are all running into life-changing issues that has his head spinning. He is the type of fella who loves consistency and stability in his life, and at every turn he is finding out that those are the last two things he has any control over.
 			<br /><br />
-			Armed with a playlist to try and bring reason to his world, Nathan will do what he has always done-move forward without a clue. It’s worked up to this point, right?
+			Armed with a playlist to try and bring reason to his world, Nathan will do what he has always done-move forward without a clue. It's worked up to this point, right?
 			<br />
 			</p>
-			<br />
-			<br />
-			<br />
+			<br /><br /><br />
 			<p>
 			Life.
 			<br />
@@ -232,6 +259,8 @@
 			Thanks for stopping by and be sure to have a look around. Check out both my Twitter and Facebook feeds and give me a follow! Feel free to drop me line at tgamachebooks@gmail.com
 		</p>
 		<p style="margin-top: 20px;"></p>
+		<p style="margin-top: 20px; border-style: solid; border-color: black;"></p>
+		<a class="twitter-timeline" href="https://twitter.com/t_gamache?ref_src=twsrc%5Etfw">Tweets by t_gamache</a> <script async src="https://platform.twitter.com/widgets.js" charset="utf-8"></script>
 	</div>
 	
 </body>
