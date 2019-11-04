@@ -1,7 +1,7 @@
 # T Gamache Books
 > Orlando Indie Author and Coffee Addict
 
-[![Build Status](https://travis-ci.com/scotch115/Website.svg?branch=master)](https://travis-ci.com/scotch115/Website)
+[![Build Status](https://travis-ci.com/scotch115/Website.svg?branch=master)](https://travis-ci.com/scotch115/TGamacheBooks)
 
 ## Welcome to the T Gamache's Website Repository!
 
