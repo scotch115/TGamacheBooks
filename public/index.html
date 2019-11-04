@@ -4,14 +4,14 @@
 	<meta charset="utf-8" />
 	<meta http-equiv="X-UA-Compatible" content="IE=edge">
 	<meta name="viewport" content="width=device-width, initial-scale=1.0">
-	
+
 	<meta property="og:title" content="T Gamache - Offical Site of the Author T Gamache" />
 	<meta property="og:image" content="../images/notsocommoncover.png" />
-	
+
 	<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
-	
+
 	<title>T Gamache, Author - Official Site</title>
-	
+
 	<style>
 		:root {
 			--primary-color: white;
@@ -34,7 +34,7 @@
 				height: 250vmin;
 				margin: 0;
 		}
-		
+
 		.floating-card {
 			width: 50vmin;
 			height: 80vmin;
@@ -52,24 +52,24 @@
 			background-color: white;
 			opacity: 1;
 		}
-		
+
 		.title {
-			position: relative; 
+			position: relative;
 			width: 90%;
-			font-size: 180%; 
+			font-size: 180%;
 			font-style: normal;
 			font-weight: 400;
-			padding: 10px; 
+			padding: 10px;
 			margin: 0 0 auto;
 		}
-		
+
 		.linkContainer {
 			position: absolute;
 			top: 82%;
 			text-align: left;
-			
+
 		}
-		
+
 		.links > a {
 				color: black;
 				padding: 0 25px;
@@ -79,8 +79,8 @@
 				text-decoration: none;
 				text-transform: uppercase;
 		}
-		
-		/* TODO: 
+
+		/* TODO:
 		- Adjust left and righ side margins
 		- Select Font
 		- Integrate Dark mode for ya boi
@@ -89,15 +89,15 @@
 		.main {
 			float: left;
 			top: 5%;
-			width: 60%; 
+			width: 60%;
 			padding: 0 20px;
 		}
-		
+
 		.social {
 			position: absolute;
 			top: 530px;
 		}
-		
+
 		.fa {
 		  padding: 10px;
 		  font-size: 20px;
@@ -126,34 +126,34 @@
 		  background: #125688;
 		  color: white;
 		}
-		
+
 		.fa-send {
 			background: #125688;
 			color: white;
 		}
-		
+
 		.profile-pic {
-			width: 35vmin; 
-			height: 45vmin; 
-			position: absolute; 
+			width: 35vmin;
+			height: 45vmin;
+			position: absolute;
 			left: 13%;
 		}
-		
+
 		.cover-photo {
-			padding: 0 5px; 
+			padding: 0 5px;
 			float: left;
 		}
-		
+
 		.subtitle {
-			font-family:'Joesfin Sans' sans-serif; 
-			font-size: 50%; 
-			line-height: 0.5; 
-			margin: 0.5 auto; 
-			text-align: center; 
+			font-family:'Joesfin Sans' sans-serif;
+			font-size: 50%;
+			line-height: 0.5;
+			margin: 0.5 auto;
+			text-align: center;
 			color: lightgrey;
 		}
-		
-		@media only screen and (max-width: 800px) {
+
+		@media only screen and (max-width: 800px) and (orientation: portrait) {
 			/* For Mobile Viewing */
 			.floating-card {
 				width: 90%;
@@ -162,38 +162,38 @@
 				left: 2vw;
 				position: relative;
 			}
-			
+
 			.main {
 				width: 85%;
 				margin-top: 10px;
 			}
-			
+
 			.title {
 				font-size: 8vw;
 			}
-			
+
 			.subtitle {
 				font-size: 4vw;
 			}
-			
+
 			.profile-pic {
 				left: 30%;
 			}
-			
+
 			.social {
 				top: 78vw;
 				right: -5vw;
 			}
-			
+
 			.fa {
 				width: 4vw;
 				font-size: 4vw;
 			}
-			
+
 			.linkContainer {
 				left: 0;
 			}
-			
+
 			.cover-photo {
 				width: 85vw;
 				height: 45%;
@@ -201,7 +201,107 @@
 			}
 		}
 
-				
+		@media only screen and (min-width: 800px) and (max-width: 1150px) and (orientation : portrait) {
+			/* For Tablets in Portrait Viewing */
+			.floating-card {
+				width: 90%;
+				height: 35%;
+				padding: 10px;
+				left: 2vw;
+				position: relative;
+			}
+
+			.main {
+				width: 85%;
+				margin-top: 10px;
+			}
+
+			.title {
+				font-size: 8vw;
+			}
+
+			.subtitle {
+				font-size: 4vw;
+			}
+
+			.profile-pic {
+				left: 30%;
+			}
+
+			.social {
+				top: 78vw;
+				right: -5vw;
+			}
+
+			.fa {
+				width: 4vw;
+				font-size: 4vw;
+			}
+
+			.linkContainer {
+				left: 0;
+			}
+
+			.cover-photo {
+				width: 85vw;
+				height: 45%;
+				padding-bottom: 5vw;
+			}
+		}
+
+		@media only screen and (min-width: 800px) and (max-width: 1500px) and (orientation : landscape) {
+				/* For Mobile Viewing */
+				.floating-card {
+					width: 30vmin;
+					height: 45vmin;
+					padding: 10px;
+					left: 2vmin;
+					position: -webkit-sticky;
+				}
+
+				.main {
+					width: 65%;
+					margin-top: 10px;
+				}
+
+				.title {
+					font-size: 2vmin;
+				}
+
+				.subtitle {
+					font-size: 1vmin;
+				}
+
+				.profile-pic {
+					left: 8%;
+					width: 25vmin;
+					height: 30vmin;
+				}
+
+				.social {
+					top: 40vmin;
+					right: -1vw;
+				}
+
+				.fa {
+					width: 1.5vw;
+					font-size: 1.5vw;
+				}
+
+				.linkContainer {
+					left: 0;
+					top: 41vmin;
+				}
+
+				.cover-photo {
+					width: 18vw;
+					height: 4%;
+					padding-bottom: 1vw;
+				}
+			}
+		}
+
+
 	</style>
 </head>
 <body>
@@ -228,7 +328,7 @@
 	</div>
 	<div class="main">
 		<p><img class="cover-photo" data-attachment-id="171" data-permalink="https://tomgamachebooks.com/background_texture_tom-2/" data-orig-file="https://i2.wp.com/tomgamachebooks.com/wp-content/uploads/2019/07/IMG_0013.jpg?fit=3150%2C4800&amp;ssl=1" data-orig-size="3150,4800" data-comments-opened="1" data-image-meta="{&quot;aperture&quot;:&quot;0&quot;,&quot;credit&quot;:&quot;&quot;,&quot;camera&quot;:&quot;&quot;,&quot;caption&quot;:&quot;&quot;,&quot;created_timestamp&quot;:&quot;1559359965&quot;,&quot;copyright&quot;:&quot;&quot;,&quot;focal_length&quot;:&quot;0&quot;,&quot;iso&quot;:&quot;0&quot;,&quot;shutter_speed&quot;:&quot;0&quot;,&quot;title&quot;:&quot;background_texture_Tom 2&quot;,&quot;orientation&quot;:&quot;1&quot;}" data-image-title="background_texture_Tom 2" data-image-description="" data-medium-file="https://i2.wp.com/tomgamachebooks.com/wp-content/uploads/2019/07/IMG_0013.jpg?fit=197%2C300&amp;ssl=1" data-large-file="https://i2.wp.com/tomgamachebooks.com/wp-content/uploads/2019/07/IMG_0013.jpg?fit=672%2C1024&amp;ssl=1" class="wp-image-171 alignleft jetpack-lazy-image jetpack-lazy-image--handled" src="https://i2.wp.com/tomgamachebooks.com/wp-content/uploads/2019/07/IMG_0013.jpg?resize=300%2C457&amp;ssl=1" alt="" width="300" height="457" data-recalc-dims="1" srcset="https://i2.wp.com/tomgamachebooks.com/wp-content/uploads/2019/07/IMG_0013.jpg?resize=672%2C1024&amp;ssl=1 672w, https://i2.wp.com/tomgamachebooks.com/wp-content/uploads/2019/07/IMG_0013.jpg?resize=197%2C300&amp;ssl=1 197w, https://i2.wp.com/tomgamachebooks.com/wp-content/uploads/2019/07/IMG_0013.jpg?resize=768%2C1170&amp;ssl=1 768w, https://i2.wp.com/tomgamachebooks.com/wp-content/uploads/2019/07/IMG_0013.jpg?resize=945%2C1440&amp;ssl=1 945w, https://i2.wp.com/tomgamachebooks.com/wp-content/uploads/2019/07/IMG_0013.jpg?w=1454&amp;ssl=1 1454w, https://i2.wp.com/tomgamachebooks.com/wp-content/uploads/2019/07/IMG_0013.jpg?w=2181&amp;ssl=1 2181w" data-lazy-loaded="1" sizes="(max-width: 300px) 100vw, 300px">
-			Welcome to my site! 
+			Welcome to my site!
 			My first novel, "Not-So-Common-People" is available now from Amazon!!
 			<br />
 			Click here to order!
@@ -266,6 +366,6 @@
 		<p style="margin-top: 20px; border-style: solid; border-color: black;"></p>
 		<a class="twitter-timeline" href="https://twitter.com/t_gamache?ref_src=twsrc%5Etfw">Tweets by t_gamache</a> <script async src="https://platform.twitter.com/widgets.js" charset="utf-8"></script>
 	</div>
-	
+
 </body>
 </html>
