@@ -1,0 +1,458 @@
+<!doctype html>
+<html lang="{{ app()->getLocale() }}">
+<head>
+	<meta charset="utf-8" />
+	<meta http-equiv="X-UA-Compatible" content="IE=edge">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+	<meta property="og:title" content="T Gamache - Offical Site of the Author T Gamache" />
+	<meta property="og:image" content="../images/notsocommoncover.png" />
+
+	<!-- <link rel="stylesheet" href="/public/style.css" /> -->
+	<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+
+	<title>T Gamache, Author - Official Site</title>
+
+	<style>
+			:root {
+				--primary-color: white;
+				--font-color: black;
+				--invert: invert(1);
+			}
+
+			[data-theme="dark"] {
+				--primary-color: #353D3F;
+				--font-color: white;
+				--invert: invert(0);
+			}
+
+			/* BODY */
+			html, body {
+					background-color: var(--primary-color);
+					color: var(--font-color);
+					font-family: 'Joesefin Sans', sans-serif;
+					font-weight: 600;
+					font-size: 19px;
+					font-style: italic;
+					height: 250vmin;
+					margin: 0;
+			}
+
+			.floating-card {
+				width: 50vmin;
+				height: 80vmin;
+				padding: 10px;
+				top: 5%;
+				display: block;
+				border-style: solid;
+				border-color: black;
+				position: -webkit-sticky;
+				position: sticky;
+				float: left;
+				text-align: center;
+				left: 5px;
+				top: 5px;
+				background-color: white;
+				opacity: 1;
+			}
+
+			.title {
+				position: absolute;
+				width: 100%;
+				height: 40%;
+				text-align: center;
+				font-size: 5vmin;
+				font-style: normal;
+				font-weight: 400;
+				padding: 10px;
+				margin: 0 0 auto;
+				color: white;
+				top: 50%;
+			}
+
+
+			.linkContainer {
+				position: absolute;
+				top: 82%;
+				text-align: left;
+
+			}
+
+			.links > a {
+					color: black;
+					padding: 0 25px;
+					font-size: 12px;
+					font-weight: 600;
+					letter-spacing: .1rem;
+					text-decoration: none;
+					text-transform: uppercase;
+			}
+
+			a {
+				color: inherit;
+				text-decoration: none;
+			}
+
+			/* TODO:
+			- Adjust left and righ side margins
+			- Select Font
+			- Integrate Dark mode for ya boi
+			- Set up simple database with one of his blog posts or something
+			*/
+			.main {
+				float: left;
+				top: 5%;
+				width: 60%;
+				padding: 0 20px;
+				letter-spacing: 2px;
+			}
+
+			.social {
+				position: absolute;
+				top: 73vmin;
+				right: 0;
+			}
+
+			.fa {
+				padding: 10px;
+				font-size: 20px;
+				width: 25px;
+				text-align: center;
+				text-decoration: none;
+				margin: 5px 2px;
+				border-radius: 50%;
+			}
+
+			.fa:hover {
+					opacity: 0.7;
+			}
+
+			.fa-facebook {
+				background: #3B5998;
+				color: white;
+			}
+
+			.fa-twitter {
+				background: #55ACEE;
+				color: white;
+			}
+
+			.fa-instagram {
+				background: #125688;
+				color: white;
+			}
+
+			.fa-send {
+				background: #125688;
+				color: white;
+			}
+
+			.profile-pic {
+				width: 35vmin;
+				height: 45vmin;
+				position: absolute;
+				left: 13%;
+			}
+
+
+			.subtitle {
+				font-family:'Joesfin Sans' sans-serif;
+				font-size: 50%;
+				line-height: 0.5;
+				margin: 0.5 auto;
+				text-align: center;
+				color: lightgrey;
+			}
+			
+			/* Arrow scroller */
+							.scroll-down {
+								position: absolute;
+								left: 50%;
+								top: 86vmin;
+								display: block;
+								text-align: center;
+								font-size: 20px;
+								z-index: 100;
+								text-decoration: none;
+								text-shadow: 0;
+							  width: 13px;
+							  height: 13px;
+							  border-bottom: 2px solid #fff;
+							  border-right: 2px solid #fff;
+							  z-index: 9;
+							  left: 50%;
+								filter: var(--invert);
+							  -webkit-transform: translate(-50%, 0%) rotate(45deg);
+							  -moz-transform: translate(-50%, 0%) rotate(45deg);
+							  transform: translate(-50%, 0%) rotate(45deg);
+								-webkit-animation: fade_move_down 4s ease-in-out infinite;
+								-moz-animation:    fade_move_down 4s ease-in-out infinite;
+								animation:         fade_move_down 4s ease-in-out infinite;
+							}
+
+							/*animated scroll arrow animation*/
+							@-webkit-keyframes fade_move_down {
+							  0%   { -webkit-transform:translate(0,-10px) rotate(45deg); opacity: 0;  }
+							  50%  { opacity: 1;  }
+							  100% { -webkit-transform:translate(0,10px) rotate(45deg); opacity: 0; }
+							}
+							@-moz-keyframes fade_move_down {
+							  0%   { -moz-transform:translate(0,-10px) rotate(45deg); opacity: 0;  }
+							  50%  { opacity: 1;  }
+							  100% { -moz-transform:translate(0,10px) rotate(45deg); opacity: 0; }
+							}
+							@keyframes fade_move_down {
+							  0%   { transform:translate(0,-10px) rotate(45deg); opacity: 0;  }
+							  50%  { opacity: 1;  }
+							  100% { transform:translate(0,10px) rotate(45deg); opacity: 0; }
+							}
+							
+							ul {
+							  list-style-type: none;
+							  margin: 0;
+							  padding: 0;
+							  overflow: hidden;
+							  background-color: #333;
+							}
+
+							li {
+							  float: left;
+							}
+
+							li a {
+							  display: block;
+							  color: white;
+							  text-align: center;
+							  padding: 14px 16px;
+							  text-decoration: none;
+							}
+
+							li a:hover:not(.active) {
+							  background-color: #111;
+							}
+
+							.active {
+							  background-color: gray;
+							}
+			
+
+			@media only screen and (max-width: 800px) and (orientation: portrait) {
+				/* For Mobile Viewing */
+				.floating-card {
+					width: 90%;
+					height: 35%;
+					padding: 10px;
+					left: 2vw;
+					position: relative;
+				}
+
+				.main {
+					width: 85%;
+					margin-top: 10px;
+				}
+
+				.title {
+					font-size: 8vw;
+				}
+
+				.subtitle {
+					font-size: 4vw;
+				}
+
+				.profile-pic {
+					left: 30%;
+				}
+
+				.social {
+					top: 78vw;
+					right: -5vw;
+				}
+
+				.fa {
+					width: 4vw;
+					font-size: 4vw;
+				}
+
+				.linkContainer {
+					left: 0;
+				}
+
+				.cover-photo {
+					width: 85vw;
+					height: 45%;
+					padding-bottom: 5vw;
+				}
+			}
+
+			@media only screen and (min-width: 800px) and (max-width: 1150px) and (orientation : portrait) {
+				/* For Tablets in Portrait Viewing */
+				.floating-card {
+					width: 90%;
+					height: 35%;
+					padding: 10px;
+					left: 2vw;
+					position: relative;
+				}
+
+				.main {
+					width: 85%;
+					margin-top: 10px;
+				}
+
+				.title {
+					font-size: 8vw;
+				}
+
+				.subtitle {
+					font-size: 4vw;
+				}
+
+				.profile-pic {
+					left: 30%;
+				}
+
+				.social {
+					top: 78vw;
+					right: -5vw;
+				}
+
+				.fa {
+					width: 4vw;
+					font-size: 4vw;
+				}
+
+				.linkContainer {
+					left: 0;
+				}
+
+				.cover-photo {
+					width: 85vw;
+					height: 45%;
+					padding-bottom: 5vw;
+				}
+			}
+
+			@media only screen and (min-width: 800px) and (max-width: 1100px) and (orientation : landscape) {
+					/* For Mobile Viewing */
+					.floating-card {
+						width: 30vmin;
+						height: 45vmin;
+						padding: 10px;
+						left: 2vmin;
+						position: -webkit-sticky;
+					}
+
+					.main {
+						width: 65%;
+						margin-top: 10px;
+					}
+
+					.title {
+						font-size: 2vmin;
+					}
+
+					.subtitle {
+						font-size: 1vmin;
+					}
+
+					.profile-pic {
+						left: 8%;
+						width: 25vmin;
+						height: 30vmin;
+					}
+
+					.social {
+						top: 40vmin;
+						right: -1vw;
+					}
+
+					.fa {
+						width: 1.5vw;
+						font-size: 1.5vw;
+					}
+
+					.linkContainer {
+						left: 0;
+						top: 41vmin;
+					}
+
+					.cover-photo {
+						width: 18vw;
+						height: 4%;
+						padding-bottom: 1vw;
+					}
+				}
+			}
+		 
+		 .cover-photo {
+		 	width: 100%; 
+		 	height: 100%;
+		 	z-index: -1;
+		 	background-image: url("/images/cover.jpeg");
+		 	background-size: cover;
+		 	opacity: 0.5;
+		 }
+		 
+		 .cover-photo-overlay {
+			width: 100%;
+			height: 40%;
+			background-color: black;
+
+		}
+		
+	</style>
+</head>
+<body>
+	<ul>
+	  <li><a class="active" href="/">Home</a></li>
+	  <li><a href="about.html">About Me</a></li>
+	  <li><a href="blog">Blog</a></li>
+	</ul>
+	<div class="cover-photo-overlay"> 
+			<div class="title">T Gamache</div>
+			<div class="cover-photo"></div>
+	</div>
+	<div class="scroll-down"></div>
+	<div class="main">
+		<p>
+			Welcome to my site!
+			My first novel, "Not-So-Common-People" is available now from Amazon!!
+			<br /><br />
+			Click <a href="http://bit.ly/NSCP_tg">here</a> to order!
+			<br /><br />
+			Nathan Smythe is a young man with a musical addiction, a stressful family, and 2 roommates who seem to be the only people who understand him. When tragedy strikes his family he finds feelings he didn't know he had, and meets someone who could change the trajectory of his life forever. Only this is not what he had planned at all. But then again, he never really had a plan.
+			<br /><br />
+			Nathan and his three siblings are all running into life-changing issues that has his head spinning. He is the type of fella who loves consistency and stability in his life, and at every turn he is finding out that those are the last two things he has any control over.
+			<br /><br />
+			Armed with a playlist to try and bring reason to his world, Nathan will do what he has always done-move forward without a clue. It's worked up to this point, right?
+			<br />
+			</p>
+			<br /><br /><br />
+			<p>
+			Life.
+			<br />
+			<br />
+			Music.
+			<br />
+			<br />
+			Love.
+			<br />
+			<br />
+			Not necessarily in that order.
+			<br />
+			<br />
+			<br />
+			<br />
+			Thanks for stopping by and be sure to have a look around. Check out both my Twitter and Facebook feeds and give me a follow! Feel free to drop me line at tgamachebooks@gmail.com
+		</p>
+		<p style="margin-top: 20px;"></p>
+		<!-- Embedded Social Feed/Headers -->
+		<div id="fb-root"></div>
+		<script async defer crossorigin="anonymous" src="https://connect.facebook.net/en_US/sdk.js#xfbml=1&version=v5.0"></script>
+		<div class="fb-page" data-href="https://www.facebook.com/tgamachebooks" data-tabs="" data-width="" data-height="" data-small-header="false" data-adapt-container-width="true" data-hide-cover="false" data-show-facepile="false"><blockquote cite="https://www.facebook.com/tgamachebooks" class="fb-xfbml-parse-ignore"><a href="https://www.facebook.com/tgamachebooks">T Gamache</a></blockquote></div>
+		<p style="margin-top: 20px; border-style: solid; border-color: black;"></p>
+		<a class="twitter-timeline" href="https://twitter.com/t_gamache?ref_src=twsrc%5Etfw">Tweets by t_gamache</a> <script async src="https://platform.twitter.com/widgets.js" charset="utf-8"></script>
+	</div>
+
+</body>
+</html>
