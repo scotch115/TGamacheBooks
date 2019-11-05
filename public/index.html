@@ -8,298 +8,309 @@
 	<meta property="og:title" content="T Gamache - Offical Site of the Author T Gamache" />
 	<meta property="og:image" content="../images/notsocommoncover.png" />
 
+	<!-- <link rel="stylesheet" href="/public/style.css" /> -->
 	<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
 
 	<title>T Gamache, Author - Official Site</title>
 
 	<style>
-		:root {
-			--primary-color: white;
-			--font-color: black;
-			--invert: invert(1);
-		}
-		[data-theme="dark"] {
-			--primary-color: #353D3F;
-			--font-color: white;
-			--invert: invert(0);
-		}
-		/* BODY */
-		html, body {
-				background-color: var(--primary-color);
-				color: var(--font-color);
-				font-family: 'Joesefin Sans', sans-serif;
-				font-weight: 800;
-				font-size: 19px;
-				font-style: italic;
-				height: 250vmin;
-				margin: 0;
-		}
+			:root {
+				--primary-color: white;
+				--font-color: black;
+				--invert: invert(1);
+			}
 
-		.floating-card {
-			width: 50vmin;
-			height: 80vmin;
-			padding: 10px;
-			top: 5%;
-			display: block;
-			border-style: solid;
-			border-color: black;
-			position: -webkit-sticky;
-			position: sticky;
-			float: left;
-			text-align: center;
-			left: 5px;
-			top: 5px;
-			background-color: white;
-			opacity: 1;
-		}
+			[data-theme="dark"] {
+				--primary-color: #353D3F;
+				--font-color: white;
+				--invert: invert(0);
+			}
 
-		.title {
-			position: relative;
-			width: 90%;
-			font-size: 4vmin;
-			font-style: normal;
-			font-weight: 400;
-			padding: 10px;
-			margin: 0 0 auto;
-		}
+			/* BODY */
+			html, body {
+					background-color: var(--primary-color);
+					color: var(--font-color);
+					font-family: 'Joesefin Sans', sans-serif;
+					font-weight: 600;
+					font-size: 19px;
+					font-style: italic;
+					height: 250vmin;
+					margin: 0;
+			}
 
-		.linkContainer {
-			position: absolute;
-			top: 82%;
-			text-align: left;
+			.floating-card {
+				width: 50vmin;
+				height: 80vmin;
+				padding: 10px;
+				top: 5%;
+				display: block;
+				border-style: solid;
+				border-color: black;
+				position: -webkit-sticky;
+				position: sticky;
+				float: left;
+				text-align: center;
+				left: 5px;
+				top: 5px;
+				background-color: white;
+				opacity: 1;
+			}
 
-		}
+			.title {
+				position: relative;
+				width: 90%;
+				font-size: 5vmin;
+				font-style: normal;
+				font-weight: 400;
+				padding: 10px;
+				margin: 0 0 auto;
+			}
 
-		.links > a {
-				color: black;
-				padding: 0 25px;
-				font-size: 12px;
-				font-weight: 600;
-				letter-spacing: .1rem;
+
+			.linkContainer {
+				position: absolute;
+				top: 82%;
+				text-align: left;
+
+			}
+
+			.links > a {
+					color: black;
+					padding: 0 25px;
+					font-size: 12px;
+					font-weight: 600;
+					letter-spacing: .1rem;
+					text-decoration: none;
+					text-transform: uppercase;
+			}
+
+			a {
+				color: inherit;
 				text-decoration: none;
-				text-transform: uppercase;
-		}
-
-		/* TODO:
-		- Adjust left and righ side margins
-		- Select Font
-		- Integrate Dark mode for ya boi
-		- Set up simple database with one of his blog posts or something
-		*/
-		.main {
-			float: left;
-			top: 5%;
-			width: 60%;
-			padding: 0 20px;
-		}
-
-		.social {
-			position: absolute;
-			top: 530px;
-		}
-
-		.fa {
-		  padding: 10px;
-		  font-size: 20px;
-		  width: 20px;
-		  text-align: center;
-		  text-decoration: none;
-		  margin: 5px 2px;
-		  border-radius: 50%;
-		}
-
-		.fa:hover {
-		    opacity: 0.7;
-		}
-
-		.fa-facebook {
-		  background: #3B5998;
-		  color: white;
-		}
-
-		.fa-twitter {
-		  background: #55ACEE;
-		  color: white;
-		}
-
-		.fa-instagram {
-		  background: #125688;
-		  color: white;
-		}
-
-		.fa-send {
-			background: #125688;
-			color: white;
-		}
-
-		.profile-pic {
-			width: 35vmin;
-			height: 45vmin;
-			position: absolute;
-			left: 13%;
-		}
-
-		.cover-photo {
-			padding: 0 5px;
-			float: left;
-		}
-
-		.subtitle {
-			font-family:'Joesfin Sans' sans-serif;
-			font-size: 50%;
-			line-height: 0.5;
-			margin: 0.5 auto;
-			text-align: center;
-			color: lightgrey;
-		}
-
-		@media only screen and (max-width: 800px) and (orientation: portrait) {
-			/* For Mobile Viewing */
-			.floating-card {
-				width: 90%;
-				height: 35%;
-				padding: 10px;
-				left: 2vw;
-				position: relative;
 			}
 
+			/* TODO:
+			- Adjust left and righ side margins
+			- Select Font
+			- Integrate Dark mode for ya boi
+			- Set up simple database with one of his blog posts or something
+			*/
 			.main {
-				width: 85%;
-				margin-top: 10px;
-			}
-
-			.title {
-				font-size: 8vw;
-			}
-
-			.subtitle {
-				font-size: 4vw;
-			}
-
-			.profile-pic {
-				left: 30%;
+				float: left;
+				top: 5%;
+				width: 60%;
+				padding: 0 20px;
+				letter-spacing: 2px;
 			}
 
 			.social {
-				top: 78vw;
-				right: -5vw;
+				position: absolute;
+				top: 73vmin;
+				right: 0;
 			}
 
 			.fa {
-				width: 4vw;
-				font-size: 4vw;
-			}
-
-			.linkContainer {
-				left: 0;
-			}
-
-			.cover-photo {
-				width: 85vw;
-				height: 45%;
-				padding-bottom: 5vw;
-			}
-		}
-
-		@media only screen and (min-width: 800px) and (max-width: 1150px) and (orientation : portrait) {
-			/* For Tablets in Portrait Viewing */
-			.floating-card {
-				width: 90%;
-				height: 35%;
 				padding: 10px;
-				left: 2vw;
-				position: relative;
+				font-size: 20px;
+				width: 25px;
+				text-align: center;
+				text-decoration: none;
+				margin: 5px 2px;
+				border-radius: 50%;
 			}
 
-			.main {
-				width: 85%;
-				margin-top: 10px;
+			.fa:hover {
+					opacity: 0.7;
 			}
 
-			.title {
-				font-size: 8vw;
+			.fa-facebook {
+				background: #3B5998;
+				color: white;
 			}
 
-			.subtitle {
-				font-size: 4vw;
+			.fa-twitter {
+				background: #55ACEE;
+				color: white;
+			}
+
+			.fa-instagram {
+				background: #125688;
+				color: white;
+			}
+
+			.fa-send {
+				background: #125688;
+				color: white;
 			}
 
 			.profile-pic {
-				left: 30%;
-			}
-
-			.social {
-				top: 78vw;
-				right: -5vw;
-			}
-
-			.fa {
-				width: 4vw;
-				font-size: 4vw;
-			}
-
-			.linkContainer {
-				left: 0;
+				width: 35vmin;
+				height: 45vmin;
+				position: absolute;
+				left: 13%;
 			}
 
 			.cover-photo {
-				width: 85vw;
-				height: 45%;
-				padding-bottom: 5vw;
+				padding: 0 5px;
+				float: left;
 			}
-		}
 
-		@media only screen and (min-width: 800px) and (max-width: 1100px) and (orientation : landscape) {
+			.subtitle {
+				font-family:'Joesfin Sans' sans-serif;
+				font-size: 50%;
+				line-height: 0.5;
+				margin: 0.5 auto;
+				text-align: center;
+				color: lightgrey;
+			}
+
+			@media only screen and (max-width: 800px) and (orientation: portrait) {
 				/* For Mobile Viewing */
 				.floating-card {
-					width: 30vmin;
-					height: 45vmin;
+					width: 90%;
+					height: 35%;
 					padding: 10px;
-					left: 2vmin;
-					position: -webkit-sticky;
+					left: 2vw;
+					position: relative;
 				}
 
 				.main {
-					width: 65%;
+					width: 85%;
 					margin-top: 10px;
 				}
 
 				.title {
-					font-size: 2vmin;
+					font-size: 8vw;
 				}
 
 				.subtitle {
-					font-size: 1vmin;
+					font-size: 4vw;
 				}
 
 				.profile-pic {
-					left: 8%;
-					width: 25vmin;
-					height: 30vmin;
+					left: 30%;
 				}
 
 				.social {
-					top: 40vmin;
-					right: -1vw;
+					top: 78vw;
+					right: -5vw;
 				}
 
 				.fa {
-					width: 1.5vw;
-					font-size: 1.5vw;
+					width: 4vw;
+					font-size: 4vw;
 				}
 
 				.linkContainer {
 					left: 0;
-					top: 41vmin;
 				}
 
 				.cover-photo {
-					width: 18vw;
-					height: 4%;
-					padding-bottom: 1vw;
+					width: 85vw;
+					height: 45%;
+					padding-bottom: 5vw;
 				}
 			}
-		}
+
+			@media only screen and (min-width: 800px) and (max-width: 1150px) and (orientation : portrait) {
+				/* For Tablets in Portrait Viewing */
+				.floating-card {
+					width: 90%;
+					height: 35%;
+					padding: 10px;
+					left: 2vw;
+					position: relative;
+				}
+
+				.main {
+					width: 85%;
+					margin-top: 10px;
+				}
+
+				.title {
+					font-size: 8vw;
+				}
+
+				.subtitle {
+					font-size: 4vw;
+				}
+
+				.profile-pic {
+					left: 30%;
+				}
+
+				.social {
+					top: 78vw;
+					right: -5vw;
+				}
+
+				.fa {
+					width: 4vw;
+					font-size: 4vw;
+				}
+
+				.linkContainer {
+					left: 0;
+				}
+
+				.cover-photo {
+					width: 85vw;
+					height: 45%;
+					padding-bottom: 5vw;
+				}
+			}
+
+			@media only screen and (min-width: 800px) and (max-width: 1100px) and (orientation : landscape) {
+					/* For Mobile Viewing */
+					.floating-card {
+						width: 30vmin;
+						height: 45vmin;
+						padding: 10px;
+						left: 2vmin;
+						position: -webkit-sticky;
+					}
+
+					.main {
+						width: 65%;
+						margin-top: 10px;
+					}
+
+					.title {
+						font-size: 2vmin;
+					}
+
+					.subtitle {
+						font-size: 1vmin;
+					}
+
+					.profile-pic {
+						left: 8%;
+						width: 25vmin;
+						height: 30vmin;
+					}
+
+					.social {
+						top: 40vmin;
+						right: -1vw;
+					}
+
+					.fa {
+						width: 1.5vw;
+						font-size: 1.5vw;
+					}
+
+					.linkContainer {
+						left: 0;
+						top: 41vmin;
+					}
+
+					.cover-photo {
+						width: 18vw;
+						height: 4%;
+						padding-bottom: 1vw;
+					}
+				}
+			}
 
 
 	</style>
@@ -308,7 +319,7 @@
 	<div class="floating-card">
 		<div class="title">
 			<hr />
-			T Gamache - Author
+			<a href="/">t gamache</a>
 			<hr />
 			<p class="subtitle">
 				Official Site of the Author T Gamache
@@ -321,7 +332,7 @@
 			</div>
 		</div>
 		<div class="linkContainer">
-			<a style="color: black; padding: 0 25px; font-size: 15px; font-weight: 600; letter-spacing: .1rem;">About</a>
+			<a style="color: black; padding: 0 25px; font-size: 15px; font-weight: 600; letter-spacing: .1rem;" href="about">About</a>
 			<br />
 			<a style="color: black; padding: 0 25px; font-size: 15px; font-weight: 600; letter-spacing: .1rem;">Blog</a>
 		</div>
@@ -330,8 +341,8 @@
 		<p><img class="cover-photo" data-attachment-id="171" data-permalink="https://tomgamachebooks.com/background_texture_tom-2/" data-orig-file="https://i2.wp.com/tomgamachebooks.com/wp-content/uploads/2019/07/IMG_0013.jpg?fit=3150%2C4800&amp;ssl=1" data-orig-size="3150,4800" data-comments-opened="1" data-image-meta="{&quot;aperture&quot;:&quot;0&quot;,&quot;credit&quot;:&quot;&quot;,&quot;camera&quot;:&quot;&quot;,&quot;caption&quot;:&quot;&quot;,&quot;created_timestamp&quot;:&quot;1559359965&quot;,&quot;copyright&quot;:&quot;&quot;,&quot;focal_length&quot;:&quot;0&quot;,&quot;iso&quot;:&quot;0&quot;,&quot;shutter_speed&quot;:&quot;0&quot;,&quot;title&quot;:&quot;background_texture_Tom 2&quot;,&quot;orientation&quot;:&quot;1&quot;}" data-image-title="background_texture_Tom 2" data-image-description="" data-medium-file="https://i2.wp.com/tomgamachebooks.com/wp-content/uploads/2019/07/IMG_0013.jpg?fit=197%2C300&amp;ssl=1" data-large-file="https://i2.wp.com/tomgamachebooks.com/wp-content/uploads/2019/07/IMG_0013.jpg?fit=672%2C1024&amp;ssl=1" class="wp-image-171 alignleft jetpack-lazy-image jetpack-lazy-image--handled" src="https://i2.wp.com/tomgamachebooks.com/wp-content/uploads/2019/07/IMG_0013.jpg?resize=300%2C457&amp;ssl=1" alt="" width="300" height="457" data-recalc-dims="1" srcset="https://i2.wp.com/tomgamachebooks.com/wp-content/uploads/2019/07/IMG_0013.jpg?resize=672%2C1024&amp;ssl=1 672w, https://i2.wp.com/tomgamachebooks.com/wp-content/uploads/2019/07/IMG_0013.jpg?resize=197%2C300&amp;ssl=1 197w, https://i2.wp.com/tomgamachebooks.com/wp-content/uploads/2019/07/IMG_0013.jpg?resize=768%2C1170&amp;ssl=1 768w, https://i2.wp.com/tomgamachebooks.com/wp-content/uploads/2019/07/IMG_0013.jpg?resize=945%2C1440&amp;ssl=1 945w, https://i2.wp.com/tomgamachebooks.com/wp-content/uploads/2019/07/IMG_0013.jpg?w=1454&amp;ssl=1 1454w, https://i2.wp.com/tomgamachebooks.com/wp-content/uploads/2019/07/IMG_0013.jpg?w=2181&amp;ssl=1 2181w" data-lazy-loaded="1" sizes="(max-width: 300px) 100vw, 300px">
 			Welcome to my site!
 			My first novel, "Not-So-Common-People" is available now from Amazon!!
-			<br />
-			Click here to order!
+			<br /><br />
+			Click <a href="http://bit.ly/NSCP_tg">here</a> to order!
 			<br /><br />
 			Nathan Smythe is a young man with a musical addiction, a stressful family, and 2 roommates who seem to be the only people who understand him. When tragedy strikes his family he finds feelings he didn't know he had, and meets someone who could change the trajectory of his life forever. Only this is not what he had planned at all. But then again, he never really had a plan.
 			<br /><br />
