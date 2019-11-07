@@ -28,9 +28,6 @@ app.get('/about', function(req, res) {
   res.sendFile(__dirname + '/public/about.html');
 });
 
-app.get('/mysterybox', function(req, res) {
-  res.sendFile(__dirname + '/public/test.html');
-});
 
 
 app.listen(8080);
