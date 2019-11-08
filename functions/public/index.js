@@ -5,9 +5,6 @@ const fs = require('fs');
 const express = require('express');
 const app = express();
 
-/* this makes files retreivable via direct url manipulation: <url>/about.html - no bueno */
-// app.use(express.static('public'));
-
 
 app.get('/', function(req, res) {
   res.sendFile(__dirname + '/public/index.html');
