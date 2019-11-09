@@ -1,6 +1,5 @@
 const functions = require('firebase-functions');
 const admin = require('firebase-admin');
-
 const http = require('http');
 const fs = require('fs');
 const express = require('express');
@@ -8,8 +7,6 @@ const app = express();
 
 /* this makes files retreivable via direct url manipulation: <url>/about.html - no bueno */
 // app.use(express.static('public'));
-
-// var  httpServer = http.Server(app);
 
 app.use(express.static(__dirname + "/../public"));
 
