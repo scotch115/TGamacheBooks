@@ -10,7 +10,7 @@
 
 	<!-- Need to do more research on loading data from firebase, possibly dynamic for number of articles? -->
   <script src="https://static.fusioncharts.com/code/latest/fusioncharts.js"></script>
-	<script src="https://www.gstatic.com/firebasejs/4.6.2/firebase-app.js"></script>
+	<script src="https://www.gstatic.com/firebasejs/4.6.2/firebase.js"></script>
 	<script src="https://www.gstatic.com/firebasejs/4.6.2/firebase-database.js"></script>
 	<script src="/main.js"></script>
 	<script>
@@ -332,9 +332,9 @@
 			</div>
 		</div>
 		<div class="linkContainer">
-			<a style="color: black; padding: 0 25px; font-size: 15px; font-weight: 600; letter-spacing: .1rem;" href="about">About</a>
+			<a style="color: black; padding: 0 25px; font-size: 15px; font-weight: 600; letter-spacing: .1rem;" href="about.html">About</a>
 			<br />
-			<a style="color: black; padding: 0 25px; font-size: 15px; font-weight: 600; letter-spacing: .1rem;" href="blog">Blog</a>
+			<a style="color: black; padding: 0 25px; font-size: 15px; font-weight: 600; letter-spacing: .1rem;" href="test.html">Blog</a>
 			<br />
 			<a style="color: black; padding: 0 25px; font-size: 15px; font-weight: 600; letter-spacing: .1rem;" href="https://www.amazon.com/T-Gamache/e/B07V3B924K/ref=dp_byline_cont_pop_book_1">Books</a>
 		</div>
@@ -343,17 +343,6 @@
 	<div class="blogDiv"></div>
 </body>
 <script src="https://www.gstatic.com/firebasejs/5.9.1/firebase.js"></script>
-<script>
-// Initialize Firebase
-	var config = {
-		apiKey: "AIzaSyAuqXCgR7z4DgDmTOXWOyTJq_o0IO9NsLY",
-		authDomain: "tomgamachebooks.firebaseapp.com",
-		databaseURL: "https://tomgamachebooks.firebaseio.com",
-		projectId: "tomgamachebooks",
-		storageBucket: "tomgamachebooks.appspot.com",
-		messagingSenderId: "233346595074"
-	};
-	firebase.initializeApp(config);
-</script>
+<script src="../script.js"></script>
 
 </html>
