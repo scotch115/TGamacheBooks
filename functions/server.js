@@ -12,11 +12,11 @@ app.get('/', function(req, res) {
   res.sendFile(__dirname + '/public/index.html');
 });
 
-app.get('/about', function(req, res) {
+app.get('/about.html', function(req, res) {
   res.sendFile(__dirname + '/public/about.html');
 });
 
-app.get('/blog', function(req, res) {
+app.get('/test.html', function(req, res) {
 	res.sendFile(__dirname + '/public/test.html');
 });
 

@@ -9,31 +9,6 @@
 	<meta property="og:image" content="../images/notsocommoncover.png" />
 
 	<!-- Need to do more research on loading data from firebase, possibly dynamic for number of articles? -->
-  <script src="https://static.fusioncharts.com/code/latest/fusioncharts.js"></script>
-	<script src="https://www.gstatic.com/firebasejs/4.6.2/firebase.js"></script>
-	<script src="https://www.gstatic.com/firebasejs/4.6.2/firebase-database.js"></script>
-	<script src="/main.js"></script>
-	<script>
-	window.addEventListener("load", getData(genFunction));
-	function getData(callbackIN) {
-		var ref = firebase.database().ref("data");
-		ref.once('value').then(function (snapshot) {
-			callbackIN(snapshot.val())
-		});
-	}
-	function genFunction(data) {
-		var cdata = [];
-		var len = data.length;
-		for(var i=1; i<len; i++) {
-			cdata.push({
-				label: data[i]['label'],
-				value: data[i]['value']
-			});
-		};
-	firebaseChart.render();
-	}
-	</script>
-
 	<!-- <link rel="stylesheet" href="/public/style.css" /> -->
 	<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
 
@@ -342,7 +317,9 @@
 	<div style="position: relative; left: 25vw; top: 1vw; font-size: 19px; font-weight: 300;">Blog:</div>
 	<div class="blogDiv"></div>
 </body>
-<script src="https://www.gstatic.com/firebasejs/5.9.1/firebase.js"></script>
-<script src="../script.js"></script>
-
+<script src="/__/firebase/6.4.0/firebase-app.js"></script>
+<script src="/__/firebase/6.4.0/firebase-storage.js"></script>
+<script src="/__/firebase/6.4.0/firebase-firestore.js"></script>
+<script src="/__/firebase/init.js"></script>
+<script src="../public/main.js" type="text/javascript"></script>
 </html>
