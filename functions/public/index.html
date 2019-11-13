@@ -2,17 +2,322 @@
 <html lang="{{ app()->getLocale() }}">
 <head>
 	<meta charset="utf-8" />
-	<meta http-equiv="X-UA-Compatible" content="IE=edge" />
-	<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+	<meta http-equiv="X-UA-Compatible" content="IE=edge">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
 
 	<meta property="og:title" content="T Gamache - Offical Site of the Author T Gamache" />
 	<meta property="og:image" content="../images/notsocommoncover.png" />
 
-	<link rel="stylesheet" type="text/css" href="css/style.css" >
-	<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css" />
+	<!-- <link rel="stylesheet" href="/public/style.css" /> -->
+	<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
 
 	<title>T Gamache, Author - Official Site</title>
 
+	<style>
+			:root {
+				--primary-color: white;
+				--font-color: black;
+				--invert: invert(1);
+			}
+
+			[data-theme="dark"] {
+				--primary-color: #353D3F;
+				--font-color: white;
+				--invert: invert(0);
+			}
+
+			/* BODY */
+			html, body {
+					background-color: var(--primary-color);
+					color: var(--font-color);
+					font-family: 'Avantgarde', sans-serif;
+					font-weight: 300;
+					font-size: 19px;
+					height: 250vmin;
+					margin: 0;
+			}
+
+			.floating-card {
+				width: 50vmin;
+				height: 80vmin;
+				padding: 10px;
+				top: 5%;
+				display: block;
+				border-style: solid;
+				border-color: black;
+				position: -webkit-sticky;
+				position: sticky;
+				float: left;
+				text-align: center;
+				left: 5px;
+				top: 5px;
+				background-color: white;
+				opacity: 1;
+			}
+
+			.title {
+				position: relative;
+				width: 90%;
+				font-size: 5vmin;
+				font-style: normal;
+				font-weight: 400;
+				padding: 10px;
+				margin: 0 0 auto;
+			}
+
+
+			.linkContainer {
+				position: absolute;
+				top: 82%;
+				text-align: left;
+
+			}
+
+			.links > a {
+					color: black;
+					padding: 0 25px;
+					font-size: 12px;
+					font-weight: 600;
+					letter-spacing: .1rem;
+					text-decoration: none;
+					text-transform: uppercase;
+			}
+
+			a {
+				color: inherit;
+				text-decoration: none;
+			}
+
+			/* TODO:
+			- Adjust left and righ side margins
+			- Select Font
+			- Integrate Dark mode for ya boi
+			- Set up simple database with one of his blog posts or something
+			*/
+			.main {
+				float: left;
+				top: 5%;
+				width: 60%;
+				padding: 0 20px;
+				letter-spacing: 2px;
+			}
+
+			.social {
+				position: absolute;
+				top: 73vmin;
+				right: 0;
+			}
+
+			.fa {
+				padding: 10px;
+				font-size: 20px;
+				width: 20px;
+				text-align: center;
+				text-decoration: none;
+				margin: 5px 2px;
+				border-radius: 50%;
+			}
+
+			.fa:hover {
+					opacity: 0.7;
+			}
+
+			.fa-facebook {
+				background: #3B5998;
+				color: white;
+			}
+
+			.fa-twitter {
+				background: #55ACEE;
+				color: white;
+			}
+
+			.fa-instagram {
+				background: #125688;
+				color: white;
+			}
+
+			.fa-send {
+				background: #125688;
+				color: white;
+			}
+
+			.fa-instagram {
+				background: #CC3366;
+				color: white;
+			}
+
+			.profile-pic {
+				width: 35vmin;
+				height: 45vmin;
+				position: absolute;
+				left: 13%;
+			}
+
+			.cover-photo {
+				padding: 0 5px;
+				float: left;
+			}
+
+			.subtitle {
+				font-family:'Avantgarde' sans-serif;
+				font-size: 50%;
+				line-height: 0.5;
+				margin: 0.5 auto;
+				text-align: center;
+				color: lightgrey;
+			}
+
+			@media only screen and (max-width: 800px) and (orientation: portrait) {
+				/* For Mobile Viewing */
+				.floating-card {
+					width: 90%;
+					height: 35%;
+					padding: 10px;
+					left: 2vw;
+					position: relative;
+				}
+
+				.main {
+					width: 85%;
+					margin-top: 10px;
+				}
+
+				.title {
+					font-size: 8vw;
+				}
+
+				.subtitle {
+					font-size: 4vw;
+				}
+
+				.profile-pic {
+					left: 30%;
+				}
+
+				.social {
+					top: 78vw;
+					right: -5vw;
+				}
+
+				.fa {
+					width: 4vw;
+					font-size: 4vw;
+				}
+
+				.linkContainer {
+					left: 0;
+				}
+
+				.cover-photo {
+					width: 85vw;
+					height: 45%;
+					padding-bottom: 5vw;
+				}
+			}
+
+			@media only screen and (min-width: 800px) and (max-width: 1150px) and (orientation : portrait) {
+				/* For Tablets in Portrait Viewing */
+				.floating-card {
+					width: 90%;
+					height: 40%;
+					padding: 10px;
+					left: 2vw;
+					position: relative;
+				}
+
+				.main {
+					width: 85%;
+					margin-top: 10px;
+				}
+
+				.title {
+					font-size: 8vw;
+				}
+
+				.subtitle {
+					font-size: 4vw;
+				}
+
+				.profile-pic {
+					left: 30%;
+				}
+
+				.social {
+					top: 90vw;
+					right: -5vw;
+				}
+
+				.fa {
+					width: 3vw;
+					font-size: 3vw;
+				}
+
+				.linkContainer {
+					left: 0;
+				}
+
+				.cover-photo {
+					width: 85vw;
+					height: 45%;
+					padding-bottom: 5vw;
+				}
+			}
+
+			@media only screen and (min-width: 500px) and (max-width: 1100px) and (orientation : landscape) {
+					/* For Mobile Viewing */
+					.floating-card {
+						width: 30vmin;
+						height: 50vmin;
+						padding: 10px;
+						left: 2vmin;
+						position: -webkit-sticky;
+					}
+
+					.main {
+						width: 65%;
+						margin-top: 10px;
+					}
+
+					.title {
+						font-size: 2vmin;
+					}
+
+					.subtitle {
+						font-size: 1vmin;
+					}
+
+					.profile-pic {
+						left: 8%;
+						width: 25vmin;
+						height: 30vmin;
+					}
+
+					.social {
+						top: 45vmin;
+						right: -1vw;
+					}
+
+					.fa {
+						width: 1vw;
+						font-size: 1vw;
+					}
+
+					.linkContainer {
+						left: 0;
+						top: 41vmin;
+					}
+
+					.cover-photo {
+						width: 18vw;
+						height: 4%;
+						padding-bottom: 1vw;
+					}
+				}
+			}
+
+
+	</style>
 </head>
 <body>
 	<div class="floating-card">
