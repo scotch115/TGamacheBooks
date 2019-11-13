@@ -17,10 +17,10 @@ app.get('/about.html', function(req, res) {
 });
 
 app.get('/test.html', function(req, res) {
-	res.sendFile(__dirname + '/public/test.html');
+	res.sendFile(__dirname + '/public/blog.html');
 });
 
-app.use(express.static(__dirname + '/public/posts'));	
+app.use(express.static(__dirname + '/public/posts'));
 
 
 

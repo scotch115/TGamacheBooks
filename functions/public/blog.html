@@ -37,7 +37,7 @@
 			<div class="linkContainer">
 				<a style="color: black; padding: 0 25px; font-size: 15px; font-weight: 600; letter-spacing: .1rem;" href="about.html">About</a>
 				<br />
-				<a style="color: black; padding: 0 25px; font-size: 15px; font-weight: 600; letter-spacing: .1rem;" href="test.html">Blog</a>
+				<a style="color: black; padding: 0 25px; font-size: 15px; font-weight: 600; letter-spacing: .1rem;" href="blog.html">Blog</a>
 				<br />
 				<a style="color: black; padding: 0 25px; font-size: 15px; font-weight: 600; letter-spacing: .1rem;" href="https://www.amazon.com/T-Gamache/e/B07V3B924K/ref=dp_byline_cont_pop_book_1">Books</a>
 			</div>
@@ -80,8 +80,8 @@
 					var articleBody = blogs[k].articleBody;
 					// console.log(title, articleBody);
 					var article = document.createElement("blogDiv");
-					article.innerHTML += '<a href="'+blogs[k].title+'.html">'+blogs[k].title+'</a>';
-					article.innerHTML += "<p>"+blogs[k].articleBody+"<p>";
+					article.innerHTML += '<a href="posts/'+title+'.html">'+title+'</a>';
+					article.innerHTML += '<p style="padding: 10px">'articleBody+'<p>';
 					article.setAttribute('class', 'blogDiv');
 					document.body.appendChild(article);
 				}
