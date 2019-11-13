@@ -9,8 +9,10 @@
 	<meta property="og:image" content="../images/notsocommoncover.png" />
 
 	<!-- Need to do more research on loading data from firebase, possibly dynamic for number of articles? -->
-	<link rel="stylesheet" href="style.css" />
+	<link rel="stylesheet" type="text/css" href="css/style.css" />
 	<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+
+	<script src="https://www.gstatic.com/firebasejs/3.3.2/firebase.js"></script>
 
 	<title>T Gamache, Author - Official Site</title>
 
@@ -41,11 +43,29 @@
 			</div>
 		</div>
 		<div style="position: relative; left: 25vw; top: 1vw; font-size: 19px; font-weight: 300;">Blog:</div>
-		<div class="blogDiv"></div>
+		<div class="blogDiv" id="blogDiv"></div>
 	</body>
-	<script src="/__/firebase/6.4.0/firebase-app.js"></script>
-	<script src="/__/firebase/6.4.0/firebase-storage.js"></script>
-	<script src="/__/firebase/6.4.0/firebase-firestore.js"></script>
-	<script src="/__/firebase/init.js"></script>
-	<script src="../public/main.js" type="text/javascript"></script>
+	<script>
+			var config = {
+				apiKey: "AIzaSyAuqXCgR7z4DgDmTOXWOyTJq_o0IO9NsLY",
+				authDomain: "tomgamachebooks.firebaseapp.com",
+				databaseURL: "https://tomgamachebooks.firebaseio.com",
+				projectId: "tomgamachebooks",
+				storageBucket: "tomgamachebooks.appspot.com",
+				messagingSenderId: "233346595074"
+			};
+			firebase.initializeApp(config);
+
+			var dbRef = firebase.database().ref('articleBody');
+
+			dbRef.on('value', gotData, errData);
+
+			function gotData(data) {
+				console.log(data.val());
+			}
+
+			function errData(err) {
+				console.log("Error: " +err);
+			}
+	</script>
 </html>

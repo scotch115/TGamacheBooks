@@ -6,7 +6,7 @@ const app = express();
 
 var  httpServer = http.Server(app);
 
-app.use(express.static(__dirname + "/../public"));
+app.use(express.static(__dirname + '/public'));
 
 app.get('/', function(req, res) {
   res.sendFile(__dirname + '/public/index.html');
@@ -18,11 +18,6 @@ app.get('/about.html', function(req, res) {
 
 app.get('/test.html', function(req, res) {
 	res.sendFile(__dirname + '/public/test.html');
-});
-
-// THIS PROPERLY LOADS THE FILE INTO THE BROWSER, JUST NEED TO ADD JEKYLL PACKAGE!!
-app.get('/index.html', function(req, res) {
-	res.sendFile(__dirname + '/blog/index.html');
 });
 
 

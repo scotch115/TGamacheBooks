@@ -90,6 +90,7 @@
 				position: absolute;
 				top: 73vmin;
 				right: 0;
+				font-size: 20px;
 			}
 
 			.fa {
@@ -182,6 +183,7 @@
 				.social {
 					top: 78vw;
 					right: -5vw;
+					font-size: 4vw;
 				}
 
 				.fa {
@@ -230,6 +232,7 @@
 				.social {
 					top: 90vw;
 					right: -5vw;
+					font-size: 3vw;
 				}
 
 				.fa {
@@ -280,6 +283,7 @@
 					.social {
 						top: 45vmin;
 						right: -1vw;
+						font-size: 1vw;
 					}
 
 					.fa {
@@ -299,7 +303,7 @@
 					}
 				}
 			}
-			
+
 			.header {
 				/* Fix this */
 				float: right;
@@ -315,15 +319,20 @@
 				width: 60%;
 				padding: 0 20px;
 			}
-			
+
 			 .blogDiv {
 				 border-radius: 25px;
+				 transition: box-shadow .3s;
 				 width: 25vw;
 				 height: 15vw;
-				 border: 2px solid black;
+				 border: 1.5px solid black;
 				 margin: 15px;
 				 display: inline-grid;
 				 position: relative;
 				 top: 2vw;
+  		 	 text-align: center;
 			 }
 
+			 .blogDiv:hover {
+				 box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+			 }
