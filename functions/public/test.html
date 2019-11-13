@@ -59,10 +59,13 @@
 			var dbRef = firebase.database().ref('blogs');
 
 			dbRef.on('value', gotData, errData);
-
+			// TODO: Format blog div sizes (and inner text size) for Mobile
+			// TODO: Research most efficient method for Dad to upload new blogs (potentially a web text editor with a user login page)
+			// TODO: link db keys to files in posts folder, and create links within the div borders to open article full screen with a back button on top left
+			
 			function gotData(data) {
 				// console.log(data.val());
-				
+
 				/* potentially look into some way to
 				 * stop articles from loading multiple times.
 				 * May not encounter this issue due to Firebase implemementation.
