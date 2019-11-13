@@ -17,7 +17,7 @@
 					font-family: 'Avantgarde', sans-serif;
 					font-weight: 300;
 					font-size: 19px;
-					height: 250vmin;
+					height: 200vmin;
 					margin: 0;
 			}
 
@@ -323,12 +323,12 @@
 			 .blogDiv {
 				 border-radius: 25px;
 				 transition: box-shadow .3s;
-				 width: 25vw;
+				 width: 30vw;
 				 height: 15vw;
 				 border: 1.5px solid black;
 				 margin: 15px;
 				 display: inline-grid;
-				 position: relative;
+				 float: center;
 				 top: 2vw;
   		 	 text-align: center;
 				 overflow: hidden;
@@ -336,4 +336,20 @@
 
 			 .blogDiv:hover {
 				 box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+			 }
+
+			 .backButton {
+				 position: relative;
+				 left: 0px;
+				 bottom: 1vw;
+				 display: block;
+				 text-align: center;
+				 width: 5vw;
+				 height: 1.2vw;
+				 padding: 10px;
+				 margin: 2px;
+				 border-radius: 45px;
+				 border: 1.5px solid black;
+				 font-size: 15px;
+
 			 }

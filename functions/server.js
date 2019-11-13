@@ -20,6 +20,8 @@ app.get('/test.html', function(req, res) {
 	res.sendFile(__dirname + '/public/test.html');
 });
 
+app.use(express.static(__dirname + '/public/posts'));	
+
 
 
 app.listen(8080);
