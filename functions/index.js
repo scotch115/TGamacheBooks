@@ -21,6 +21,7 @@ app.get('/blog', function(req, res) {
 	res.sendFile(__dirname + '/public/blog.html');
 });
 
+// Import Firebase credentials
 var config = {
 	apiKey: "AIzaSyAuqXCgR7z4DgDmTOXWOyTJq_o0IO9NsLY",
 	authDomain: "tomgamachebooks.firebaseapp.com",
@@ -31,6 +32,7 @@ var config = {
 };
 firebase.initializeApp(config);
 
+// Database reference
 var dbRef = firebase.database().ref('blogs');
 
 dbRef.on('value', gotData, errData);
@@ -39,6 +41,7 @@ function gotData(data) {
 	var keys = Object.keys(blogs);
 	// console.log(keys);
 
+	// For each key in the database, create a new template html file, and fill with populate with firebase data
 	for (var i = 0; i < keys.length; i++){
 		var k = keys[i];
 		var title = blogs[k].title;
