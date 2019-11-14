@@ -35,15 +35,14 @@
 				</div>
 			</div>
 			<div class="linkContainer">
-				<a style="color: black; padding: 0 25px; font-size: 15px; font-weight: 600; letter-spacing: .1rem;" href="about.html">About</a>
+				<a class="links" href="about.html">About</a>
 				<br />
-				<a style="color: black; padding: 0 25px; font-size: 15px; font-weight: 600; letter-spacing: .1rem;" href="blog.html">Blog</a>
+				<a class="links" href="blog.html">Blog</a>
 				<br />
-				<a style="color: black; padding: 0 25px; font-size: 15px; font-weight: 600; letter-spacing: .1rem;" href="https://www.amazon.com/T-Gamache/e/B07V3B924K/ref=dp_byline_cont_pop_book_1">Books</a>
+				<a class="links" href="https://www.amazon.com/T-Gamache/e/B07V3B924K/ref=dp_byline_cont_pop_book_1">Books</a>
 			</div>
 		</div>
-		<div style="position: relative; left: 25vw; top: 1vw; font-size: 19px; font-weight: 300;">Blog:</div>
-		<div id="blogDiv"></div>
+		<div class="main">Blog:</div>
 	</body>
 	<script>
 			var config = {
@@ -61,7 +60,6 @@
 			dbRef.on('value', gotData, errData);
 			// TODO: Format blog div sizes (and inner text size) for Mobile
 			// TODO: Research most efficient method for Dad to upload new blogs (potentially a web text editor with a user login page)
-			// TODO: link db keys to files in posts folder, and create links within the div borders to open article full screen with a back button on top left
 			// TODO: Find a way to take firebase data and CREATE a new file so dad could write once and update site easily
 			function gotData(data) {
 				// console.log(data.val());
@@ -81,7 +79,7 @@
 					// console.log(title, articleBody);
 					var article = document.createElement("blogDiv");
 					article.innerHTML += '<a href="posts/'+title+'.html">'+title+'</a>';
-					article.innerHTML += '<p style="padding: 10px">'articleBody+'<p>';
+					article.innerHTML += '<p style="padding: 10px">'+articleBody+'<p>';
 					article.setAttribute('class', 'blogDiv');
 					document.body.appendChild(article);
 				}

@@ -28,14 +28,15 @@
 				top: 5%;
 				display: block;
 				border-style: solid;
-				border-color: black;
+				border-color: var(--font-color);
 				position: -webkit-sticky;
 				position: sticky;
 				float: left;
 				text-align: center;
 				left: 5px;
 				top: 5px;
-				background-color: white;
+				background-color: var(--primary-color);
+				color: var(--font-color);
 				opacity: 1;
 			}
 
@@ -57,14 +58,12 @@
 
 			}
 
-			.links > a {
-					color: black;
+			.links {
+					color: var(--font-color);
 					padding: 0 25px;
-					font-size: 12px;
+					font-size: 15px;
 					font-weight: 600;
 					letter-spacing: .1rem;
-					text-decoration: none;
-					text-transform: uppercase;
 			}
 
 			a {
@@ -91,6 +90,7 @@
 				top: 73vmin;
 				right: 0;
 				font-size: 20px;
+				color: var(--font-color);
 			}
 
 			.fa {
@@ -157,7 +157,7 @@
 				/* For Mobile Viewing */
 				.floating-card {
 					width: 90%;
-					height: 35%;
+					height: 45%;
 					padding: 10px;
 					left: 2vw;
 					position: relative;
@@ -200,6 +200,14 @@
 					height: 45%;
 					padding-bottom: 5vw;
 				}
+
+				.blogDiv {
+					width: 40%;
+					height: 20%;
+					margin: 5px;
+					border-radius: 15px;
+				}
+
 			}
 
 			@media only screen and (min-width: 800px) and (max-width: 1150px) and (orientation : portrait) {
@@ -230,7 +238,7 @@
 				}
 
 				.social {
-					top: 90vw;
+					top: 75vw;
 					right: -5vw;
 					font-size: 3vw;
 				}
@@ -336,6 +344,14 @@
 
 			 .blogDiv:hover {
 				 box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+			 }
+
+			 .blogHeader {
+ 				top: 5%;
+				left: 48%;
+ 				width: 60%;
+ 				padding: 0 20px;
+ 				letter-spacing: 2px;
 			 }
 
 			 .backButton {
