@@ -35,9 +35,9 @@
 				</div>
 			</div>
 			<div class="linkContainer">
-				<a class="links" href="about.html">About</a>
+				<a class="links" href="/about.html">About</a>
 				<br />
-				<a class="links" href="blog.html">Blog</a>
+				<a class="links" href="/blog.html">Blog</a>
 				<br />
 				<a class="links" href="https://www.amazon.com/T-Gamache/e/B07V3B924K/ref=dp_byline_cont_pop_book_1">Books</a>
 			</div>
@@ -45,7 +45,6 @@
 		<div class="main">Blog:</div>
 	</body>
 	<script>
-
 			var config = {
 				apiKey: "AIzaSyAuqXCgR7z4DgDmTOXWOyTJq_o0IO9NsLY",
 				authDomain: "tomgamachebooks.firebaseapp.com",
@@ -73,18 +72,13 @@
 				var keys = Object.keys(blogs);
 				console.log(keys);
 
-				/* Adding Cloud Functions local temporary directory
-				 * to store created html files in, due to inability to write files to client local system (duh)
-				 */
-				// var tmpDir = os.tmpdir();
-
 				for (var i = 0; i < keys.length; i++){
 					var k = keys[i];
 					var title = blogs[k].title;
 					var articleBody = blogs[k].articleBody;
 					// console.log(title, articleBody);
 					var article = document.createElement("blogDiv");
-					article.innerHTML += '<a href="tmp/'+title+'.html">'+title+'</a>';
+					article.innerHTML += '<a href="/posts/'+title+'.html">'+title+'</a>';
 					article.innerHTML += '<p style="padding: 10px">'+articleBody+'<p>';
 					article.setAttribute('class', 'blogDiv');
 					document.body.appendChild(article);

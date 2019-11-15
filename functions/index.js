@@ -6,12 +6,16 @@ const fs = require('fs');
 const express = require('express');
 const app = express();
 const firebase = require('firebase');
-const path = require('path');
-const os = require('os');
-const tmpDir = os.tmpdir();
-// const filePath = path.join(tmpDir, '/public/tests');
 
-app.use(express.static(__dirname + '/public'));
+// admin.initializeApp({
+// 	credential: admin.credential.cert('../serviceAccountKey.json'),
+// 	storageBucket: "tomgamachebooks.appspot.com"
+// });
+
+// const bucket = admin.storage().bucket();
+
+
+app.use(express.static(__dirname + '/posts'));
 
 app.get('/', function(req, res)  {
   res.sendFile(__dirname + '/public/index.html');
@@ -51,28 +55,33 @@ function gotData(data) {
 		var title = blogs[k].title;
 		var articleBody = blogs[k].articleBody;
 		var htmlTemplateStart = fs.readFileSync('public/templateStart.txt', "utf8");
-		newFile = fs.writeFile(tmpDir+title+'.html', htmlTemplateStart, function(err) {
+		newFile = fs.writeFile('public/posts/'+title+'.html', htmlTemplateStart, function(err) {
 			if (err) throw err;
 			console.log('File was successfully created.');
 		});
-		newFile = fs.appendFile(tmpDir+title+'.html', '<h2>'+title+'</h2>', function(err) {
+		newFile = fs.appendFile('public/posts/'+title+'.html', '<h2>'+title+'</h2>', function(err) {
 			if (err) throw err;
 			console.log('File was edited');
 		});
-		newFile = fs.appendFile(tmpDir+title+'.html', '<p style="padding: 10px">'+articleBody+'<p>', function(err) {
+		newFile = fs.appendFile('public/posts/'+title+'.html', '<p style="padding: 10px">'+articleBody+'<p>', function(err) {
 			if (err) throw err;
 			console.log('File was edited');
 		});
 		var htmlTemplateEnd = fs.readFileSync('public/templateEnd.txt', "utf8");
-		newFile = fs.appendFile(tmpDir+title+'.html', htmlTemplateEnd, function(err) {
+		newFile = fs.appendFile('public/posts/'+title+'.html', htmlTemplateEnd, function(err) {
 			if (err) throw err;
 			console.log('File was successfully completed and saved.');
 		});
+
+		// function uploadFile(newFile) {
+		// 	return firebase.storage().ref().child('posts').put(newFile).then(snapshot => {  });
+		// }
 	}
 }
 
 function errData(err) {
 	console.log("Error: " +err);
 }
+
 
 exports.app = functions.https.onRequest(app);
