@@ -6,8 +6,12 @@ const fs = require('fs');
 const express = require('express');
 const app = express();
 const firebase = require('firebase');
+const path = require('path');
+const os = require('os');
+const tmpDir = os.tmpdir();
+// const filePath = path.join(tmpDir, '/public/tests');
 
-app.use(express.static(__dirname + '/posts'));
+app.use(express.static(__dirname + '/public'));
 
 app.get('/', function(req, res)  {
   res.sendFile(__dirname + '/public/index.html');
@@ -47,20 +51,20 @@ function gotData(data) {
 		var title = blogs[k].title;
 		var articleBody = blogs[k].articleBody;
 		var htmlTemplateStart = fs.readFileSync('public/templateStart.txt', "utf8");
-		newFile = fs.writeFile('public/tests/'+title+'.html', htmlTemplateStart, function(err) {
+		newFile = fs.writeFile(tmpDir+title+'.html', htmlTemplateStart, function(err) {
 			if (err) throw err;
 			console.log('File was successfully created.');
 		});
-		newFile = fs.appendFile('public/tests/'+title+'.html', '<h2>'+title+'</h2>', function(err) {
+		newFile = fs.appendFile(tmpDir+title+'.html', '<h2>'+title+'</h2>', function(err) {
 			if (err) throw err;
 			console.log('File was edited');
 		});
-		newFile = fs.appendFile('public/tests/'+title+'.html', '<p style="padding: 10px">'+articleBody+'<p>', function(err) {
+		newFile = fs.appendFile(tmpDir+title+'.html', '<p style="padding: 10px">'+articleBody+'<p>', function(err) {
 			if (err) throw err;
 			console.log('File was edited');
 		});
 		var htmlTemplateEnd = fs.readFileSync('public/templateEnd.txt', "utf8");
-		newFile = fs.appendFile('public/tests/'+title+'.html', htmlTemplateEnd, function(err) {
+		newFile = fs.appendFile(tmpDir+title+'.html', htmlTemplateEnd, function(err) {
 			if (err) throw err;
 			console.log('File was successfully completed and saved.');
 		});

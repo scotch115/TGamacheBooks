@@ -45,6 +45,7 @@
 		<div class="main">Blog:</div>
 	</body>
 	<script>
+
 			var config = {
 				apiKey: "AIzaSyAuqXCgR7z4DgDmTOXWOyTJq_o0IO9NsLY",
 				authDomain: "tomgamachebooks.firebaseapp.com",
@@ -72,13 +73,18 @@
 				var keys = Object.keys(blogs);
 				console.log(keys);
 
+				/* Adding Cloud Functions local temporary directory
+				 * to store created html files in, due to inability to write files to client local system (duh)
+				 */
+				// var tmpDir = os.tmpdir();
+
 				for (var i = 0; i < keys.length; i++){
 					var k = keys[i];
 					var title = blogs[k].title;
 					var articleBody = blogs[k].articleBody;
 					// console.log(title, articleBody);
 					var article = document.createElement("blogDiv");
-					article.innerHTML += '<a href="tests/'+title+'.html">'+title+'</a>';
+					article.innerHTML += '<a href="tmp/'+title+'.html">'+title+'</a>';
 					article.innerHTML += '<p style="padding: 10px">'+articleBody+'<p>';
 					article.setAttribute('class', 'blogDiv');
 					document.body.appendChild(article);
