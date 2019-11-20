@@ -181,6 +181,11 @@
 				 .blogDiv > p {
 				 	font-size: 10px;
 				 }
+				 
+				 .backButton {
+				 	width: 15vw !important;
+				 	height: 5vw !important;
+				 }
 
 				.title {
 					font-size: 8vw;
@@ -245,6 +250,11 @@
 				.blogDiv > p {
 				 font-size: 15px;
 				}
+				
+				.backButton {
+				 	width: 10vw !important;
+				 	height: 2vw !important;
+				 }
 
 				.title {
 					font-size: 8vw;
@@ -294,6 +304,11 @@
 						width: 65%;
 						margin-top: 10px;
 					}
+					
+					.backButton {
+					 	width: 10vw !important;
+				 		height: 2vw !important;
+				 	}
 
 					.title {
 						font-size: 2vmin;
