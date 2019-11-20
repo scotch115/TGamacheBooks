@@ -7,7 +7,7 @@ const firebase = require('firebase');
 
 var  httpServer = http.Server(app);
 
-// app.use(express.static(__dirname + '/public'));
+app.use(express.static(__dirname + '/public'));
 
 app.get('/', function(req, res) {
   res.sendFile(__dirname + '/public/index.html');
@@ -17,13 +17,13 @@ app.get('/about.html', function(req, res) {
   res.sendFile(__dirname + '/public/about.html');
 });
 
-app.get('/test.html', function(req, res) {
+app.get('/blog.html', function(req, res) {
 	res.sendFile(__dirname + '/public/blog.html');
 });
 
 app.use(express.static(__dirname + '/public/posts'));
 
-var config = {
+/* var config = {
 	apiKey: "AIzaSyAuqXCgR7z4DgDmTOXWOyTJq_o0IO9NsLY",
 	authDomain: "tomgamachebooks.firebaseapp.com",
 	databaseURL: "https://tomgamachebooks.firebaseio.com",
@@ -70,6 +70,7 @@ function errData(err) {
 	console.log("Error: " +err);
 }
 
+*/
 
 
 app.listen(8080);

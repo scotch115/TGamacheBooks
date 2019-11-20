@@ -19,7 +19,7 @@
 					font-size: 19px;
 					height: 200vmin;
 					margin: 0;
-			}
+				}
 
 			.floating-card {
 				width: 50vmin;
@@ -167,16 +167,17 @@
 					width: 85%;
 					margin-top: 10px;
 				}
-				
-				.blogDiv {
-					 width: 90vw;
-					 height: 30vw;
+
+				.blogDiv{
+					 width: 90vw !important;
+					 height: 30vw !important;
+
 				 }
-				 
+
 				 .blogDiv > a {
 				 	font-size: 15px;
 				 }
-				 
+
 				 .blogDiv > p {
 				 	font-size: 10px;
 				 }
@@ -231,9 +232,18 @@
 					width: 85%;
 					margin-top: 10px;
 				}
-				
+
 				.blogDiv {
-					
+					width: 90vw !important;
+					height: 30vw !important;
+				}
+
+				.blogDiv > a {
+				 font-size: 25px;
+				}
+
+				.blogDiv > p {
+				 font-size: 15px;
 				}
 
 				.title {
@@ -349,7 +359,7 @@
 				 display: inline-grid;
 				 float: center;
 				 top: 2vw;
-  		 	 	 text-align: center;
+				 text-align: center;
 				 overflow: hidden;
 			 }
 
@@ -380,4 +390,3 @@
 				 font-size: 15px;
 
 			 }
-			
