@@ -154,7 +154,7 @@
 			}
 
 			@media only screen and (max-width: 800px) and (orientation: portrait) {
-				/* For Mobile Viewing */
+				/* For cell phone Viewing */
 				.floating-card {
 					width: 90%;
 					height: 45%;
@@ -167,6 +167,19 @@
 					width: 85%;
 					margin-top: 10px;
 				}
+				
+				.blogDiv {
+					 width: 90vw;
+					 height: 30vw;
+				 }
+				 
+				 .blogDiv > a {
+				 	font-size: 15px;
+				 }
+				 
+				 .blogDiv > p {
+				 	font-size: 10px;
+				 }
 
 				.title {
 					font-size: 8vw;
@@ -181,7 +194,7 @@
 				}
 
 				.social {
-					top: 78vw;
+					top: 80vw;
 					right: -5vw;
 					font-size: 4vw;
 				}
@@ -193,19 +206,13 @@
 
 				.linkContainer {
 					left: 0;
+					top: 80%;
 				}
 
 				.cover-photo {
 					width: 85vw;
 					height: 45%;
 					padding-bottom: 5vw;
-				}
-
-				.blogDiv {
-					width: 40%;
-					height: 20%;
-					margin: 5px;
-					border-radius: 15px;
 				}
 
 			}
@@ -223,6 +230,10 @@
 				.main {
 					width: 85%;
 					margin-top: 10px;
+				}
+				
+				.blogDiv {
+					
 				}
 
 				.title {
@@ -338,7 +349,7 @@
 				 display: inline-grid;
 				 float: center;
 				 top: 2vw;
-  		 	 text-align: center;
+  		 	 	 text-align: center;
 				 overflow: hidden;
 			 }
 
@@ -369,3 +380,4 @@
 				 font-size: 15px;
 
 			 }
+			
