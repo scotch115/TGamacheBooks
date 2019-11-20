@@ -153,7 +153,7 @@
 				color: lightgrey;
 			}
 
-			@media only screen and (max-width: 800px) and (orientation: portrait) {
+			@media only screen and (device-width: 375px) and (device-height: 812px) and (-webkit-device-pixel-ratio: 3) and (orientation: portrait) {
 				/* For cell phone Viewing */
 				.floating-card {
 					width: 90%;
