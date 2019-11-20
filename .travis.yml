@@ -8,10 +8,9 @@ before_install:
 
 cache: npm
 
-before_script:
-  - npm install firebase-tools -g
-  - cd functions && npm install
-
+# before_script:
+#  - npm install firebase-tools -g
+#  - cd functions && npm install
 
 deploy:
  provider: firebase
