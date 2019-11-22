@@ -14,7 +14,9 @@
 			html, body {
 					background-color: var(--primary-color);
 					color: var(--font-color);
-					font-family: 'Avantgarde', sans-serif;
+					/* font-family: 'Avantgarde', sans-serif; */
+					/* Testing Apple San Francisco Font because, well.. this is my dad we're talking about. HUGE  supporter <3 */
+					font-family: system-ui, -apple-system, BlinkMacSystemFont, "Helvetica Neue", "Lucida Grande", "Segoe UI";
 					font-weight: 300;
 					font-size: 19px;
 					height: 200vmin;
@@ -145,7 +147,8 @@
 			}
 
 			.subtitle {
-				font-family:'Avantgarde' sans-serif;
+				/* font-family:'Avantgarde' sans-serif; */
+				font-family: system-ui, -apple-system, BlinkMacSystemFont, "Helvetica Neue", "Lucida Grande", "Segoe UI";
 				font-size: 50%;
 				line-height: 0.5;
 				margin: 0.5 auto;
