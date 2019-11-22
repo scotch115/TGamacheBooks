@@ -156,7 +156,7 @@
 				color: lightgrey;
 			}
 
-			@media only screen and (max-width: 800px) and (orientation: portrait) {
+			@media only screen and (max-width: 768px) and (orientation: portrait) {
 				/* For cell phone Viewing */
 				.floating-card {
 					width: 90%;
@@ -226,7 +226,7 @@
 
 			}
 
-			@media only screen and (min-width: 800px) and (max-width: 1150px) and (orientation : portrait) {
+			@media only screen and (min-width: 768px) and (max-width: 992px) and (orientation : portrait) {
 				/* For Tablets in Portrait Viewing */
 				.floating-card {
 					width: 90%;
@@ -293,21 +293,24 @@
 				}
 			}
 
-			@media only screen and (min-width: 500px) and (max-width: 1100px) and (orientation : landscape) {
+			@media only screen and (max-width: 809px) and (orientation : landscape) {
 					/* For Mobile Viewing */
 					.floating-card {
-						width: 30vmin;
-						height: 50vmin;
+						width: 30vw;
+						height: 50vw;
 						padding: 10px;
 						left: 2vmin;
 						position: -webkit-sticky;
 					}
 
 					.main {
-						width: 65%;
+						width: 45%;
 						margin-top: 10px;
+						margin-left: 10px;
 					}
-
+					
+					body { margin-left: 10px; }
+					
 					.blogDiv > p {
 						 font-size: 15px;
 					}
