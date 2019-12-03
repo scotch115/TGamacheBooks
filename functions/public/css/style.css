@@ -1,8 +1,8 @@
 :root {
-				--primary-color: white;
-				--font-color: black;
-				--invert: invert(1);
-			}
+	--primary-color: white;
+	--font-color: black;
+	--invert: invert(1);
+}
 
 [data-theme="dark"] {
 	--primary-color: #353D3F;
