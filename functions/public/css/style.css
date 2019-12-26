@@ -16,6 +16,7 @@
 					color: var(--font-color);
 					/* font-family: 'Avantgarde', sans-serif; */
 					/* Testing Apple San Francisco Font because, well.. this is my dad we're talking about. HUGE  supporter <3 */
+					letter-spacing: 0px;
 					font-family: system-ui, -apple-system, BlinkMacSystemFont, "Helvetica Neue", "Lucida Grande", "Segoe UI";
 					font-weight: 300;
 					font-size: 19px;
@@ -424,5 +425,11 @@
 				 border: 1.5px solid black;
 				 font-size: 15px;
 
+			 }
+			 
+			 .github {
+			 	position: absolute; 
+				bottom: 0px; 
+				right: 0px;
 			 }
 	

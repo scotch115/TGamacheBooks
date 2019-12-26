@@ -1,4 +1,11 @@
 			<a class="backButton" href="javascript:history.back()">&#8249;Back</a>
+			<div id="replybox"></div>
 		</div>
+		<script>
+			window.replybox = {
+			site: 'oDanDVMR7A', 
+		};
+		</script>
+		<script src="https://cdn.getreplybox.com/js/embed.js"></script>
 	</body>
 </html>
