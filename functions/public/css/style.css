@@ -42,6 +42,16 @@
 				color: var(--font-color);
 				opacity: 1;
 			}
+			
+			.floating-card a:link {
+				color: inherit;
+			    text-decoration: none!important;
+			}
+			
+			.floating-card a:visited {
+				color: inherit;
+			    text-decoration: none!important;
+			}
 
 			.title {
 				position: relative;
@@ -69,10 +79,6 @@
 					letter-spacing: .1rem;
 			}
 
-			a {
-				color: inherit;
-				text-decoration: none;
-			}
 
 			/* TODO:
 			- Adjust left and righ side margins
@@ -93,7 +99,7 @@
 				top: 73vmin;
 				right: 0;
 				font-size: 20px;
-				color: var(--font-color);
+				color: white;
 			}
 
 			.fa {
@@ -292,6 +298,20 @@
 					height: 45%;
 					padding-bottom: 5vw;
 				}
+			
+				.blogHeader {
+			 		position: relative;
+	 				top: -50px;
+					left: 50%;
+	 				width: 30px;
+	 				height: 65px;
+	 				padding: 5px 20px 0px 20px;
+	 				border-radius: 36.5px;
+	 				border: 1.5px solid black;
+	 				background-color: white;
+	 				font-size: 10px;
+	 				letter-spacing: 2px;
+				 }
 			}
 
 			@media only screen and (max-width: 809px) and (orientation : landscape) {
@@ -382,17 +402,10 @@
 				 height: 15vw;
 				 border: 1.5px solid black;
 				 margin: 15px;
-				 /* display: inline-grid; */
-				 padding-top: 10px;
+				 padding-top: 15px;
 				 float: left;
-				 top: 2vw;
 				 text-align: center;
-				 line-height: 1em;
-				 display: block;
-				 display: -webkit-box;
-				 -webkit-line-clamp: 3;
-				 -webkit-box-orient: vertical;
-				 overflow: hidden;
+				 /* overflow: hidden; */
 			 }
 			 
 			 .blogDiv > a {
@@ -402,15 +415,18 @@
 			 .blogDiv:hover {
 				 box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
 			 }
-
+				
 			 .blogHeader {
- 				top: 5%;
-				left: 48%;
- 				width: 60%;
- 				padding: 0 20px;
- 				letter-spacing: 2px;
+			 	position: relative;
+ 				top: 1px;
+				left: 40%;
+ 				width: 30px;
+ 				height: 65px;
+ 				padding: 0px 5px;
+ 				font-size: 20px;
+ 				text-align: center;
 			 }
-
+			 
 			 .backButton {
 				 position: relative;
 				 left: 0px;
