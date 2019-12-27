@@ -299,19 +299,6 @@
 					padding-bottom: 5vw;
 				}
 			
-				.blogHeader {
-			 		position: relative;
-	 				top: -50px;
-					left: 50%;
-	 				width: 30px;
-	 				height: 65px;
-	 				padding: 5px 20px 0px 20px;
-	 				border-radius: 36.5px;
-	 				border: 1.5px solid black;
-	 				background-color: white;
-	 				font-size: 10px;
-	 				letter-spacing: 2px;
-				 }
 			}
 
 			@media only screen and (max-width: 809px) and (orientation : landscape) {

@@ -81,12 +81,18 @@
 					var title = blogs[k].title;
 					var articleBody = blogs[k].articleBody;
 					// console.log(title, articleBody);
-					var txtPreview = truncate(articleBody, 20);
+					var txtPreview;
+					var mq = window.matchMedia('@media only screen and (min-width: 768px) and (max-width: 992px) and (orientation : portrait)');
+						if(mq.matches) {
+					    	txtPreview = truncate(articleBody, 30);
+						} else {
+						    txtPreview = truncate(articleBody, 20);
+						}
 					var article = document.createElement("blogDiv");
 					/* article.innerHTML += '<a href="/posts/'+title+'.html">'+title+'</a>'; */
 					article.innerHTML += '<div class="blogHeader">'+title+'</div>';
 					article.innerHTML += '<p style="margin-top: -20px">'+txtPreview+'...<p>';
-					article.innerHTML += '<a style="text-decoration: inherit !important" href="/posts/'+title+'.html"> Read More &#8594 </a>';
+					article.innerHTML += '<a style="text-decoration: inherit !important; font-size: 20px;" href="/posts/'+title+'.html"> Read More &#8594 </a>';
 					article.setAttribute('class', 'blogDiv');
 					document.body.appendChild(article);
 				}
