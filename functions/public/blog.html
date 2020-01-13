@@ -27,8 +27,7 @@
 				<p class="subtitle">
 					Official Site of the Author T Gamache
 				</p>
-				<img class="profile-pic" alt="T Gamache-Author" src="https://tomgamachebooks.com/wp-content/uploads/2019/07/cropped-8A35A76C-FDDD-4B0D-88FA-5E50446D2BFB.jpeg" >
-				<div class="social">
+			<img class="profile-pic" alt="T Gamache-Author" src="/images/profile.png" >				<div class="social">
 					<a href="https://www.facebook.com/tgamachebooks/" class="fa fa-facebook"></a>
 					<a href="https://twitter.com/t_gamache" class="fa fa-twitter"></a>
 					<a href="https://instagram.com/tgamache_books?igshid=5xlkb1vtjkeb" class=" fa fa-instagram"></a>
@@ -64,7 +63,11 @@
 			// TODO: Find a way to take firebase data and CREATE a new file so dad could write once and update site easily
 			function gotData(data) {
 				// console.log(data.val());
-
+				var posts = selectAll('.blogs');
+				for (var i = 0; i < posts.length; i++)
+				{
+					posts[i].remove();
+				}
 				/* potentially look into some way to
 				 * stop articles from loading multiple times.
 				 * May not encounter this issue due to Firebase implemementation.
