@@ -151,9 +151,16 @@
 			.cover-photo {
 				padding: 0 5px;
 				float: left;
-				width: 30vw;
-				height: 50vw;
+				width: 30vmin;
+				height: 45vmin;
 				
+			}
+			
+			.about {
+				padding: 0 5px;
+				float: left;
+				width: 10vw;
+				height: 30vw;
 			}
 
 			.subtitle {
