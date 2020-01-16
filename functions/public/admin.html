@@ -1,0 +1,77 @@
+<!doctype html>
+<html lang="{{ app()->getLocale() }}">
+<head>
+	<meta charset="utf-8" />
+	<meta http-equiv="X-UA-Compatible" content="IE=edge" />
+	<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+	<meta property="og:title" content="T Gamache - Offical Site of the Author T Gamache" />
+	<meta property="og:image" content="../images/notsocommoncover.png" />
+
+	<link rel="stylesheet" type="text/css" href="css/style.css" >
+	<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css" />
+	<link rel="shortcut icon" type="image/x-icon" href="images/favicon.ico" />
+	<link href="https://cdn.quilljs.com/1.0.0/quill.snow.css" rel="stylesheet">
+
+	<!-- Include the Quill library -->
+	<script src="https://cdn.quilljs.com/1.0.0/quill.js"></script>
+
+	<title>T Gamache, Author - Official Site</title>
+
+</head>
+<body>
+	<p style="text-align: center; font-size: 80px; position: absolute; left: 30vw;"> Welcome, Tom </p>
+	<div class="modal" id="modal"></div>
+	<div class="adminButton">
+		<div class="articleEdit" id="add">
+			 Add Article <br /> ➕
+		</div>
+		<div class="articleEdit" >
+			Edit Article <br /> ✍️
+		</div>
+		<div class="articleEdit" >
+			Remove Article <br /> 🗑
+		</div>
+	</div>
+
+	<!-- Create the toolbar container -->
+	<div id="toolbar">
+	  <button class="ql-bold">Bold</button>
+	  <button class="ql-italic">Italic</button>
+	</div>
+
+	<!-- Create the editor container -->
+	<div id="editor">
+	  <p>Hello World!</p>
+	</div>
+
+
+	<!-- Initialize Quill editor -->
+	<script>
+		var editor = new Quill('#editor', {
+			modules: { toolbar: '#toolbar' },
+			theme: 'snow'
+		});
+
+			var div = getElementById("add");
+			var toolbar = getElementById("toolbar");
+			var editor = getElementById("editor");
+			var background = getElementById("modal");
+
+			div.onclick = function() {
+				toolbar.style.display = "auto";
+				editor.style.display = "auto";
+				background.style.display = "block";
+
+			}
+
+			window.onclick = function(event) {
+				if ((event.target != toolbar) || (event.target != editor)) {
+					toolbar.style.display = "none";
+					editor.style.display = "none";
+					background.style.display = "none";
+				}
+		}
+	</script>
+</body>
+</html>
