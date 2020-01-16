@@ -12,7 +12,7 @@ before_deploy:
   - npm install firebase-tools -g
   # - cd functions && npm install
   - npm add -g pnpm
-  - enable-pnpm
+  - pnpm add -g pnpm
   - cd ..
 
 deploy:
