@@ -12,13 +12,13 @@
 	<link rel="stylesheet" type="text/css" href="css/style.css" />
 	<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
 	<link rel="shortcut icon" type="image/x-icon" href="images/favicon.ico" />
-	
+
 	<script src="https://www.gstatic.com/firebasejs/3.3.2/firebase.js"></script>
 
 	<title>T Gamache, Author - Official Site</title>
 
 	</head>
-	<body >
+	<body>
 		<div class="floating-card">
 			<div class="title">
 				<hr />
@@ -27,7 +27,8 @@
 				<p class="subtitle">
 					Official Site of the Author T Gamache
 				</p>
-			<img class="profile-pic" alt="T Gamache-Author" src="/images/profile.png" >				<div class="social">
+			<img class="profile-pic" alt="T Gamache-Author" src="/images/profile.png" >
+			<div class="social">
 					<a href="https://www.facebook.com/tgamachebooks/" class="fa fa-facebook"></a>
 					<a href="https://twitter.com/t_gamache" class="fa fa-twitter"></a>
 					<a href="https://instagram.com/tgamache_books?igshid=5xlkb1vtjkeb" class=" fa fa-instagram"></a>
@@ -58,19 +59,19 @@
 			var dbRef = firebase.database().ref('blogs');
 
 			dbRef.on('value', gotData, errData);
-			// TODO: Format blog div sizes (and inner text size) for Mobile
-			// TODO: Research most efficient method for Dad to upload new blogs (potentially a web text editor with a user login page)
-			// TODO: Find a way to take firebase data and CREATE a new file so dad could write once and update site easily
+			// TODO[x]: Format blog div sizes (and inner text size) for Mobile
+			// TODO[]: Research most efficient method for Dad to upload new blogs (potentially a web text editor with a user login page)
+			// TODO[]: Find a way to take firebase data and CREATE a new file so dad could write once and update site easily
 			function gotData(data) {
 				// console.log(data.val());
-				
+
 				/*
 				var posts = selectAll('.blogDiv');
 				for (var i = 0; i < posts.length; i++)
 				{
 					posts[i].remove();
 				}
-				
+
 				 * potentially look into some way to
 				 * stop articles from loading multiple times.
 				 * May not encounter this issue due to Firebase implemementation.
@@ -78,29 +79,29 @@
 				var blogs = data.val();
 				var keys = Object.keys(blogs);
 				console.log(keys);
-				
+
 				function truncate(str, num_words) {
 				    return str.split(" ").splice(0,num_words).join(" ");
 				}
 
-				for (var i = 0; i < keys.length; i++){
+				for (var i = 0; i < keys.length; i++) {
 					var k = keys[i];
 					var title = blogs[k].title;
 					var articleBody = blogs[k].articleBody;
 					// console.log(title, articleBody);
 					var txtPreview;
-					var mq = window.matchMedia('@media only screen and (min-width: 768px) and (max-width: 992px) and (orientation : portrait)');
-						if(mq.matches) {
-					    	txtPreview = truncate(articleBody, 30);
+					var mq = window.innerWidth;
+						if(mq < 992) {
+					    	txtPreview = truncate(articleBody, 60);
 						} else {
 						    txtPreview = truncate(articleBody, 20);
 						}
 					var article = document.createElement("blogDiv");
-					/* article.innerHTML += '<a href="/posts/'+title+'.html">'+title+'</a>'; */
 					article.innerHTML += '<div class="blogHeader">'+title+'</div>';
 					article.innerHTML += '<p style="margin-top: -20px">'+txtPreview+'...<p>';
-					article.innerHTML += '<a style="text-decoration: inherit !important; font-size: 20px;" href="/posts/'+title+'.html"> Read More &#8594 </a>';
+					// article.innerHTML += '<a class="blogLink" href="/posts/'+title+'.html"> Read More &#8594 </a>';
 					article.setAttribute('class', 'blogDiv');
+					article.setAttribute('onclick','window.open("/posts/'+title+'.html")');
 					document.body.appendChild(article);
 				}
 			}
@@ -108,6 +109,8 @@
 			function errData(err) {
 				console.log("Error: " +err);
 			}
-			
+
+			window.addEventListener('resize', gotData);
+
 	</script>
 </html>

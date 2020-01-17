@@ -309,6 +309,11 @@
 					padding-bottom: 5vw;
 				}
 
+				.blogLink {
+ 				 text-decoration: inherit !important;
+ 				 font-size: 10px;
+ 			 }
+
 			}
 
 			@media only screen and (max-width: 809px) and (orientation : landscape) {
@@ -374,16 +379,80 @@
 						padding-bottom: 1vw;
 					}
 				}
+				@media only screen and (min-width: 992px) and (max-width: 1408px) {
+					/* For Desktops with unorthodox display widths (or just a smaller windowed view) */
+					.floating-card {
+						width: 40%;
+						height: 35%;
+						padding: 10px;
+						left: 1vw;
+						position: relative;
+					}
+
+					.main {
+						width: 50%;
+						margin-top: 10px;
+					}
+
+					.blogDiv {
+						width: 40vw !important;
+						height: 15vw !important;
+					}
+
+					.blogDiv > a {
+					 font-size: 25px;
+					}
+
+					.blogDiv > p {
+					 font-size: 15px;
+					}
+
+					.backButton {
+					 	width: 10vw !important;
+					 	height: 2vw !important;
+					 }
+
+					.title {
+						font-size: 4vmin;
+					}
+
+					.subtitle {
+						font-size: 2vmin;
+					}
+
+					.profile-pic {
+						left: 8%;
+						right: 8%;
+						width: 35vmin;
+						height: 240%;
+					}
+
+					.social {
+						top: 65vmin;
+						right: -1vmin;
+						font-size: 2vmin;
+					}
+
+					.fa {
+						width: 2vmin;
+						font-size: 2vmin;
+					}
+
+					.linkContainer {
+						left: 0;
+						top: 65vh;
+					}
+
+					.cover-photo {
+						width: 20vmin;
+						height: 30%;
+						padding-bottom: 1vw;
+					}
+
+				}
 			}
 
-			.header {
-				/* Fix this */
-				float: right;
-				top: 5%;
-				padding: 0 20px;
-				letter-spacing: 2px;
 
-			}
 
 			.about {
 				float: left;
@@ -402,7 +471,8 @@
 				 padding-top: 15px;
 				 float: left;
 				 text-align: center;
-				 /* overflow: hidden; */
+				 overflow: hidden;
+				 cursor: pointer;
 			 }
 
 			 .blogDiv > a {
@@ -421,6 +491,11 @@
  				height: 65px;
  				padding: 0px 5px;
  				font-size: 20px;
+			 }
+
+			 .blogLink {
+				 text-decoration: inherit !important;
+				 font-size: 20px;
 			 }
 
 			 .backButton {
@@ -486,7 +561,7 @@
 				 background: white;
 				 border-color: inherit;
 			 }
-			 
+
 			 #editor {
 			  display: none;
 			  position: absolute;
