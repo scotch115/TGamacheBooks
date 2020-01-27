@@ -21,9 +21,12 @@ app.get('/blog.html', function(req, res) {
 	res.sendFile(__dirname + '/public/blog.html');
 });
 
-app.get('/admin.html', function(req, res) {
-	res.sendFile(__dirname + '/public/admin.html');
-});
+/* 
+ * app.get('/admin.html', function(req, res) {
+ * res.sendFile(__dirname + '/public/admin.html');
+ * });
+ *
+ */
 
 app.use(express.static(__dirname + '/public/posts'));
 
