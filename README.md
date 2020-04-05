@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
 
 ## Available Scripts
@@ -66,3 +67,17 @@ This section has moved here: https://facebook.github.io/create-react-app/docs/de
 ### `yarn build` fails to minify
 
 This section has moved here: https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify
+=======
+# T Gamache Books
+> Orlando Indie Author and Coffee Addict
+
+[![Build Status](https://travis-ci.com/scotch115/Website.svg?branch=master)](https://travis-ci.com/scotch115/TGamacheBooks)
+
+## Welcome to the T Gamache's Website Repository!
+
+Let's be honest: you're probably here by mistake. No worries! The more, the merrier!
+
+Just go ahead and browse around if you'd like, and then when you're ready, there's always the link for ya right here!
+
+https://tomgamachebooks.web.app
+>>>>>>> 522d92cc0f4afcce015ece21b7f0ddcca127f289
