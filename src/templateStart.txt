@@ -1,0 +1,45 @@
+<!doctype html>
+<html lang="{{ app()->getLocale() }}">
+<head>
+	<meta charset="utf-8" />
+	<meta http-equiv="X-UA-Compatible" content="IE=edge">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+	<meta property="og:title" content="T Gamache - Offical Site of the Author T Gamache" />
+	<meta property="og:image" content="../images/notsocommoncover.png" />
+
+	<!-- Need to do more research on loading data from firebase, possibly dynamic for number of articles? -->
+	<link rel="stylesheet" type="text/css" href="../css/style.css" />
+	<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+	<link rel="shortcut icon" type="image/x-icon" href="images/favicon.ico" />
+
+	<script src="https://www.gstatic.com/firebasejs/3.3.2/firebase.js"></script>
+
+	<title>T Gamache, Author - Official Site</title>
+</head>
+<body>
+	<div class="floating-card">
+		<div class="title">
+			<hr />
+			<a href="/">T Gamache</a>
+			<hr />
+			<p class="subtitle">
+				Official Site of the Author T Gamache
+			</p>
+			<img class="profile-pic" alt="T Gamache-Author" src="/images/profile.png" >
+			<div class="social">
+				<a href="https://www.facebook.com/tgamachebooks/" class="fa fa-facebook"></a>
+				<a href="https://twitter.com/t_gamache" class="fa fa-twitter"></a>
+				<a href="https://instagram.com/tgamache_books?igshid=5xlkb1vtjkeb" class=" fa fa-instagram"></a>
+				<a href="mailto:tgamachebooks@gmail.com" class="fa fa-send"></a>
+			</div>
+		</div>
+		<div class="linkContainer">
+			<a class="links" href="/about.html">About</a>
+			<br />
+			<a class="links" href="/blogs.html">Blog</a>
+			<br />
+			<a class="links" href="https://www.amazon.com/T-Gamache/e/B07V3B924K/ref=dp_byline_cont_pop_book_1">Books</a>
+		</div>
+	</div>
+	<div class="main" id="main">
