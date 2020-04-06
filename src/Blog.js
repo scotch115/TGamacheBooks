@@ -34,10 +34,11 @@ class Blog extends Component {
 	}
 	render() {
 		return(
-		<div className="App tile is-ancestor">
+		<div className="tile is-ancestor">
+			<div className="tile is-parent" style={{height: "10vh"}}>
 			<FloatingTile />
-			<div className="container tile is-parent" style={{position: "absolute", left: 400 }}>
-				<div style={{position: "relative", top: 10}}>Blog:
+			<div className="container tile id-vertical is-parent">
+				<div style={{position: "relative", top: 10}}><div className="title has-text-centered">Blog:</div>
 					<div className="tile is-vertical is-parent" id="tileContainer">
 					{this.state.entries.map((entry) => {
 						return(
@@ -51,6 +52,7 @@ class Blog extends Component {
 					</div>
 				</div>
 			</div>
+		 </div>
 		</div>
 		);
 	}

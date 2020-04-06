@@ -9,10 +9,11 @@ import Blog from './Blog';
 class About extends Component {
 	render() {
 		return(
-			<div className="App tile is-ancestor">
+			<div className="tile is-ancestor">
+			 <div className="tile is-parent" style={{height: "10vh"}}>
 				<FloatingTile />
-				<div className="container tile is-parent" style={{position: "absolute", left: 400}}>
-					<div className="tile is-child">
+				<div className="container tile is-vertical is-parent">
+					<div className="tile is-child box">
 						<div>
 							<br /><br />
 							About me...
@@ -29,6 +30,7 @@ class About extends Component {
 						</div>
 					</div>
 				</div>
+			</div>
 		</div>
 		);
 	}

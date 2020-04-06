@@ -9,11 +9,12 @@ import Blog from './Blog';
 class App extends Component {
   render() {
 		return (
-    <div className="App tile is-ancestor">
+    <div className="tile is-ancestor">
+		 <div className="tile is-parent" style={{height: "10vh"}}>
 			<FloatingTile />
-			<div className="container tile is-parent" style={{position: "absolute", left: 400}}>
-				<div className="tile is-child">
-					<p><img className="cover-photo" style={{padding: 10}} src={logo} width="200"/>
+			<div className="container tile is-vertical is-parent">
+				<div className="tile is-child box">
+					<p><img className="cover-photo" style={{padding: 10, float: "left"}} src={logo} width="200"/>
 						Welcome to my site!
 						My first novel, "Not-So-Common-People" is available now from Amazon!!
 						<br /><br />
@@ -46,6 +47,7 @@ class App extends Component {
 					</p>
 				</div>
 			</div>
+		 </div>
     </div>
   );
  }

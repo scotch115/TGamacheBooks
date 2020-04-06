@@ -11,15 +11,17 @@ class FloatingTile extends Component {
 	}
 	render() {
 		return(
-			<div className="container tile is-vertical is-parent" style={{position: "absolute", width: 400}}>
-				<div className="tile is-child box" style={{position: "relative", left: 20}}>
+			<div className="container tile is-vertical is-4 is-parent" style={{height: "20vh"}}>
+				<div className="tile is-child is-vertical box">
+				 <div className="has-text-centered">
 					<hr />
-					<a className="title" style={{position: "relative", left: "21%"}} href="/">T Gamache</a>
+					<a className="title is-centered" href="/">T Gamache</a>
 					<hr />
-					<p className="title is-6" style={{color: "grey", position: "relative", left: "5%"}}>
+					<p className="title is-6 has-text-centered" style={{color: "grey"}}>
 						Official Site of the Author T Gamache
 					</p>
 					<img className="profile-pic" alt="T Gamache-Author" src={profile} width="300" height="800"/>
+				 </div>
 					<div className="social">
 						<a href="https://www.facebook.com/tgamachebooks/" className="fa fa-facebook"></a>
 						<a href="https://twitter.com/t_gamache" className="fa fa-twitter"></a>
