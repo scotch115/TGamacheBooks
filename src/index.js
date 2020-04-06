@@ -6,6 +6,7 @@ import * as serviceWorker from './serviceWorker';
 import { Route, Link, BrowserRouter as Router } from 'react-router-dom';
 import About from './About';
 import Blog from './Blog';
+import Admin from './Admin';
 
 const routing = (
 	<Router>
@@ -13,6 +14,7 @@ const routing = (
 			<Route exact path="/" component={App} />
 			<Route path="/about" component={About} />
 			<Route path="/blog" component={Blog} />
+			<Route path="/database/users/admin" component={Admin} />
 		</div>
 	</Router>
 )
