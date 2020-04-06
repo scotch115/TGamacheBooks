@@ -9,13 +9,11 @@
       "**/.*",
       "**/node_modules/**"
     ],
-		"rewrites": [{
-			"source": "**/**",
-			"function": "app"
-			}],
-		"cleanUrls": true
-  },
-  "storage": {
-    "rules": "storage.rules"
+    "rewrites": [
+      {
+        "source": "**",
+        "destination": "/index.html"
+      }
+    ]
   }
 }
