@@ -153,11 +153,11 @@ class Admin extends Component {
 			)
 		};
 		// If the login was a success, but the UID does not match the one associated with my email or Tom's, change render to non authorized.
-		if (firebase.auth().currentUser.uid!== '20sKt6TCA4eRXE2s8OxJne9b5y43' && firebase.auth().currentUser.uid !== 'CLzogV62vbaYr1WHtjPGIKSUEAp2') {
+		if (firebase.auth().currentUser.uid!== '20sKt6TCA4eRXE2s8OxJne9b5y43' && firebase.auth().currentUser.uid !== 'mKzvZIEbwFhmuju6f7JJMZ8EeJU2') {
 			return(
 				<div className="section is-large">
 					<div className="container box" style={{ padding: "10px"}}>
-						<div className="title is-4 has-text-centered">You are not authorized to view this page. Please return <a href="https://trek-noise.web.app">home</a>
+						<div className="title is-4 has-text-centered">You are not authorized to view this page. Please return <a href="https://tomgamachebooks.web.app">home</a>
 						<br />
 						<button className="button is-rounded" onClick={this.signOutCurrentUser}>Sign Out</button>
 						</div>
