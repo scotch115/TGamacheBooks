@@ -1,0 +1,102 @@
+<!DOCTYPE html>
+<html lang="{{ app()->getLocale() }}">
+  <head>
+    <meta charset="utf-8" />
+    <link rel="icon" href="%PUBLIC_URL%/notsocommoncover.jpeg" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+		<meta name="apple-mobile-web-app-capable" content="yes" />
+		<link href="https://cdn.quilljs.com/1.3.6/quill.snow.css" rel="stylesheet" />
+    <meta name="theme-color" content="#000000" />
+    <meta
+      name="description"
+      content="T Gamache Official Site"
+    />
+
+		<meta property="og:title" content="T Gamache - Offical Site of the Author T Gamache" />
+		<meta property="og:image" content="../src/images/notsocommoncover.png" />
+
+    <link rel="apple-touch-icon" href="%PUBLIC_URL%/notsocommoncover.jpeg" />
+    <link rel="manifest" href="%PUBLIC_URL%/manifest.json" />
+		<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bulma@0.8.0/css/bulma.min.css">
+		<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+
+		<!--Firebase Instances -->
+		<script src="https://www.gstatic.com/firebasejs/7.8.2/firebase-app.js"></script>
+		<script src="https://www.gstatic.com/firebasejs/ui/4.4.0/firebase-ui-auth.js"></script>
+		<link type="text/css" rel="stylesheet" href="https://www.gstatic.com/firebasejs/ui/4.4.0/firebase-ui-auth.css" />
+
+    <title>T Gamache, Author - Official Site</title>
+  </head>
+  <body>
+    <noscript>You need to enable JavaScript to run this app.</noscript>
+    <div id="root"></div>
+  </body>
+	<script type="text/javascript">
+			var config = {
+				apiKey: "AIzaSyAuqXCgR7z4DgDmTOXWOyTJq_o0IO9NsLY",
+				authDomain: "tomgamachebooks.firebaseapp.com",
+				databaseURL: "https://tomgamachebooks.firebaseio.com",
+				projectId: "tomgamachebooks",
+				storageBucket: "tomgamachebooks.appspot.com",
+				messagingSenderId: "233346595074"
+			};
+			firebase.initializeApp(config);
+
+			var dbRef = firebase.database().ref('blogs');
+
+			dbRef.on('value', gotData, errData);
+			// TODO[x]: Format blog div sizes (and inner text size) for Mobile
+			// TODO[]: Research most efficient method for Dad to upload new blogs (potentially a web text editor with a user login page)
+			// TODO[]: Find a way to take firebase data and CREATE a new file so dad could write once and update site easily
+			function gotData(data) {
+				// console.log(data.val());
+
+				/*
+				var posts = selectAll('.blogDiv');
+				for (var i = 0; i < posts.length; i++)
+				{
+					posts[i].remove();
+				}
+
+				 * potentially look into some way to
+				 * stop articles from loading multiple times.
+				 * May not encounter this issue due to Firebase implemementation.
+				*/
+				var blogs = data.val();
+				var keys = Object.keys(blogs);
+				console.log(keys);
+
+				function truncate(str, num_words) {
+				    return str.split(" ").splice(0,num_words).join(" ");
+				}
+
+				for (var i = 0; i < keys.length; i++) {
+					var k = keys[i];
+					var title = blogs[k].title;
+					var articleBody = blogs[k].articleBody;
+					// console.log(title, articleBody);
+					var txtPreview;
+					var mq = window.innerWidth;
+						if(mq < 992) {
+					    	txtPreview = truncate(articleBody, 60);
+						} else {
+						    txtPreview = truncate(articleBody, 20);
+						}
+					var article = document.createElement("blogDiv");
+					article.innerHTML += '<div class="blogHeader">'+title+'</div>';
+					article.innerHTML += '<p style="margin-top: -20px">'+txtPreview+'...<p>';
+					// article.innerHTML += '<a class="blogLink" href="/posts/'+title+'.html"> Read More &#8594 </a>';
+					article.setAttribute('class', 'blogDiv');
+					article.setAttribute('onclick','window.open("/posts/'+title+'.html")');
+					document.body.appendChild(article);
+				}
+			}
+
+			function errData(err) {
+				console.log("Error: " +err);
+			}
+
+			window.addEventListener('resize', gotData);
+
+	</script>
+</html>
