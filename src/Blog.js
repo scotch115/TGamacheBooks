@@ -37,7 +37,7 @@ class Blog extends Component {
 		<div className="tile is-ancestor">
 			<div className="tile is-parent" style={{height: "10vh"}}>
 			<FloatingTile />
-			<div className="container tile id-vertical is-parent">
+			<div className="container tile is-vertical is-parent">
 				<div style={{position: "relative", top: 10}}><div className="title has-text-centered">Blog:</div>
 					<div className="tile is-vertical is-parent" id="tileContainer">
 					{this.state.entries.map((entry) => {
