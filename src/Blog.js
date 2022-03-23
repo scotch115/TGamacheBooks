@@ -32,6 +32,8 @@ class Blog extends Component {
 			});
 		});
 	}
+
+
 	render() {
 		return(
 		<div className="tile is-ancestor">
@@ -40,15 +42,20 @@ class Blog extends Component {
 			<div className="container tile id-vertical is-parent">
 				<div style={{position: "relative", top: 10}}><div className="title has-text-centered">Blog:</div>
 					<div className="tile is-vertical is-parent" id="tileContainer">
-					{this.state.entries.map((entry) => {
-						return(
-							<div className="tile box is-child" style={{whiteSpace: "pre-line"}}>
-								<p className="title is-5">{entry.title}</p>
-								<div className="has-text-centered"></div>
-								{entry.articleBody}
-							</div>
-						)
-					})}
+					{(this.state.entries.length !== 0)
+					? this.state.entries.map((entry) => {
+							return(
+								<div className="tile box is-child" style={{whiteSpace: "pre-line"}}>
+									<p className="title is-5">{entry.title}</p>
+									<div className="has-text-centered"></div>
+									{entry.articleBody}
+								</div>
+							)
+						})
+						: <h1>
+								Nothing yet, but stay tuned!
+							</h1>
+					}
 					</div>
 				</div>
 			</div>

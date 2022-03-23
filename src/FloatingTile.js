@@ -11,7 +11,7 @@ class FloatingTile extends Component {
 	}
 	render() {
 		return(
-			<div className="container tile is-vertical is-4 is-parent" style={{height: "20vh"}}>
+			<div className="floating-card container tile is-vertical is-4 is-parent">
 				<div className="tile is-child is-vertical box">
 				 <div className="has-text-centered">
 					<hr />
@@ -30,8 +30,8 @@ class FloatingTile extends Component {
 					</div>
 					<div className="linkContainer">
 						<a className="links" href="/about">About</a>
-						<br />
-						<a className="links" href="/blog">Blog</a>
+						{/* <br />
+						<a className="links" href="/blog">Blog</a> */}
 						<br />
 						<a className="links" href="https://www.amazon.com/T-Gamache/e/B07V3B924K/ref=dp_byline_cont_pop_book_1">Books</a>
 					</div>
